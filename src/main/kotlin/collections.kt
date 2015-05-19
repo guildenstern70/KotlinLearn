@@ -22,6 +22,9 @@ fun collections(): Int {
     // Immutables
     val ints : Array<Int> = array(1,2,3)
 
+    // Array creation function
+    val otherInts = Array(5, {i -> (i * i)})
+
     // Mutables
     var mutInt: ArrayList<Int> = ArrayList()
     mutInt.add(5)
@@ -30,8 +33,10 @@ fun collections(): Int {
 
     var sum = 0
 
-    for (i in ints) {
-        sum += i
+    for (k in otherInts) {
+        for (i in ints) {
+            sum += (i+k)
+        }
     }
 
     for (k in mutInt) {

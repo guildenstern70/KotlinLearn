@@ -46,8 +46,24 @@ public class Tests {
     Test fun TestCollections() {
 
         val sum = collections()
-        println("Collections Test")
-        assertEquals(sum, 24)
+        println("Collections Test => Sum = "+sum.toString())
+        assertEquals(sum, 138)
+
+    }
+
+    Test fun TestLoops() {
+
+        val sum = loops()
+        println("Loops Test => Sum = "+sum.toString())
+        assertEquals(sum, 100)
+
+    }
+
+    Test fun TestIfWhen() {
+
+        val max = ifwhen(3,4)
+        println("IfWhen Test => Max = "+max.toString())
+        assertEquals(max, 4)
 
     }
 
