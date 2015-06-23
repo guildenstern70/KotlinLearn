@@ -16,6 +16,12 @@ open class Person(firstName: String, lastName: String) {
     var name = firstName;
     var surname = lastName;
 
+    // The primary constructor cannot have any code
+    // Initializer instructions can go into
+    init {
+        // logger.info...
+    }
+
     // Secondary constructor
     constructor() : this("", "") {
     }
