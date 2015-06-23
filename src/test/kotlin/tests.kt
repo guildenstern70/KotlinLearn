@@ -90,15 +90,16 @@ public class Tests {
     }
 
     Test fun TestFiles() {
-
         createRandomTextFile()
-
         val tmpFile = File("tempfile.txt")
         assertTrue(tmpFile.exists())
-
         val result = sumContentsOfFile()
         assertTrue(result > 0)
+    }
 
+    Test fun TestNullSafety() {
+        NullSafety.storeWords()
+        assertEquals(NullSafety.words.count(), 4)
     }
 }
 
