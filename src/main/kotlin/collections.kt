@@ -20,7 +20,7 @@ import java.util.ArrayList
 fun collections(): Int {
 
     // Immutables
-    val ints : Array<Int> = array(1,2,3)
+    val ints : Array<Int> = arrayOf(1,2,3)
 
     // Array creation function
     val otherInts = Array(5, {i -> (i * i)})

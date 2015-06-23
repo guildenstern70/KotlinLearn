@@ -35,7 +35,6 @@ fun loops() : Int {
 
 fun ranges() {
 
-    var i = 0
     var x = 0
     var str = "islb"
 

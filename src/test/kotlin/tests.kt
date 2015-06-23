@@ -15,6 +15,7 @@ import org.junit.Test
 import junit.framework.TestCase
 import org.junit.After
 import org.junit.Before
+import java.io.File
 
 
 public class Tests {
@@ -24,7 +25,8 @@ public class Tests {
     }
 
     After fun tearDown() {
-        // tear down the test case
+        val tmpFile = File("tempfile.txt")
+        if (tmpFile.exists()) tmpFile.delete()
     }
 
 
@@ -77,6 +79,25 @@ public class Tests {
         alessioStudente.hello()
         assertEquals("Alessio", alessioStudente.name)
         assertEquals("Saltarin", alessioStudente.surname)
+
+    }
+
+    Test fun TestObjects() {
+        val obj = AnObject
+        obj.hello()
+        AnObject.hello()
+        assertEquals("234", AnObject.id)
+    }
+
+    Test fun TestFiles() {
+
+        createRandomTextFile()
+
+        val tmpFile = File("tempfile.txt")
+        assertTrue(tmpFile.exists())
+
+        val result = sumContentsOfFile()
+        assertTrue(result > 0)
 
     }
 }

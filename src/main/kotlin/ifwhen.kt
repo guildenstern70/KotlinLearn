@@ -20,7 +20,6 @@ fun ifwhen(a: Int, b: Int) : Int {
         max = b
 
     // With else
-
     if (a > b)
         max = a
     else
@@ -37,7 +36,7 @@ fun ifwhen(a: Int, b: Int) : Int {
         }
     }
 
-    val validNumbers = array(1,2,3,4)
+    val validNumbers = arrayOf(1,2,3,4)
 
     when (max) {
         in 1..10 -> println("max is in the range")

@@ -20,7 +20,9 @@ public fun main(args: Array<String>) {
     println()
     println("Run tests to check output.")
 
-    ranges()
+    createRandomTextFile()
+    val result = sumContentsOfFile()
+    println("The sum is " + result.toString() )
 
 }
 
