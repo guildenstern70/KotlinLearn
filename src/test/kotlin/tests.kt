@@ -101,5 +101,10 @@ public class Tests {
         NullSafety.storeWords()
         assertEquals(NullSafety.words.count(), 4)
     }
+
+    Test fun TestCompanion() {
+        val poly = Polygon.create(4)
+        assertEquals(poly.numberOfSides, 4)
+    }
 }
 
