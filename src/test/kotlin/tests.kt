@@ -106,5 +106,13 @@ public class Tests {
         val poly = Polygon.create(4)
         assertEquals(poly.numberOfSides, 4)
     }
+
+    Test fun TestDataClass() {
+        val dc = User("Alessio", "Saltarin", 45)
+        println("User Name: " + dc.component1())
+        assertEquals("Alessio", dc.component1())
+        assertEquals("Saltarin", dc.component2())
+        assertEquals(45, dc.component3())
+    }
 }
 
