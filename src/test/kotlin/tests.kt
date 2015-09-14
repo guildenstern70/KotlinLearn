@@ -63,6 +63,8 @@ public class Tests {
 
     Test fun TestIfWhen() {
 
+        val ifex = ifelse(4,5)
+        assertEquals(ifex, 5)
         val max = ifwhen(3,4)
         println("IfWhen Test => Max = "+max.toString())
         assertEquals(max, 4)

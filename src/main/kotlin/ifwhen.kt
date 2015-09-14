@@ -9,21 +9,24 @@
 
 package net.littlelite.kotlinlearn
 
-
-fun ifwhen(a: Int, b: Int) : Int {
+fun ifelse(a: Int, b: Int) : Int {
 
     var max: Int
-
-    // Traditional usage
-    max = a
-    if (a < b)
-        max = b
 
     // With else
     if (a > b)
         max = a
     else
         max = b
+
+    return max
+
+}
+
+
+fun ifwhen(a: Int, b: Int) : Int {
+
+    var max: Int
 
     // As expression
     max = if (a > b) a else b
