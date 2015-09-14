@@ -49,7 +49,7 @@ public class Tests {
 
         val sum = collections()
         println("Collections Test => Sum = "+sum.toString())
-        assertEquals(sum, 138)
+        assertEquals(sum, 141)
 
     }
 
