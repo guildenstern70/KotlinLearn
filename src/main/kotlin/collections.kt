@@ -21,6 +21,7 @@ fun collections(): Int {
 
     // Immutables
     val ints : Array<Int> = arrayOf(1,2,3)
+    val listInts: List<Int> = listOf(1,2,3)  // ordered
 
     // Access array item
     val value = ints[2]
@@ -35,6 +36,10 @@ fun collections(): Int {
     mutInt.add(7)
 
     var sum = value
+
+    // Slice
+    val intSlice = ints.toList().slice(1..2)
+    val listSlice = listInts.slice(1..2)
 
     for (k in otherInts) {
         for (i in ints) {
