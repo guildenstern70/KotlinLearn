@@ -18,7 +18,7 @@ public object NullSafety {
 
         val strTok = StringTokenizer(given_words, ",")
         while (strTok.hasMoreElements()) {
-            val word : String? = strTok.nextElement() as? String
+            val word: String = strTok.nextElement() as String
             this.words.add(this.stripVirg(word))
             sum++
         }
@@ -27,9 +27,9 @@ public object NullSafety {
 
     }
 
-    private fun stripVirg(word: String?) : String? {
+    private fun stripVirg(word: String) : String {
 
-        return word?.substring(1, word.length()-1)
+        return word.substring(1, word.length - 1)
 
     }
 

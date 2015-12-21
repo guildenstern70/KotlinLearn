@@ -9,9 +9,8 @@
 
 package net.littlelite.kotlinlearn
 
-import kotlin
 
-val VERSION: String = "0.1"
+val VERSION: String = "0.2"
 
 public fun main(args: Array<String>) {
 
