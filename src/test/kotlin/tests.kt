@@ -96,6 +96,8 @@ public class Tests {
         assertTrue(tmpFile.exists())
         val result = sumContentsOfFile()
         assertTrue(result > 0)
+        val lines = readFileLineByLine()
+        assertTrue(lines == 1)
     }
 
     @Test fun TestNullSafety() {
@@ -114,6 +116,10 @@ public class Tests {
         assertEquals("Alessio", dc.component1())
         assertEquals("Saltarin", dc.component2())
         assertEquals(45, dc.component3())
+    }
+
+    @Test fun TestLambda() {
+        assertEquals(16, lambdatest())
     }
 }
 

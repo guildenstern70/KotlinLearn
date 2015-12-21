@@ -29,6 +29,28 @@ fun createRandomTextFile() {
 
 }
 
+fun readFileLineByLine() : Int {
+
+    val theFile = File("tempfile.txt")
+    var count = 0
+
+    if (theFile.exists()) {
+        theFile.forEachLine { line: String ->
+            println(line)
+            count++
+        }
+    }
+    else {
+        println("File not found.")
+    }
+
+    println("Lines read: $count")
+
+    return count
+
+}
+
+
 fun sumContentsOfFile() : Int {
 
     var sum = -1
