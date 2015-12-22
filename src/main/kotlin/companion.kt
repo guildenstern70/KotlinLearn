@@ -4,7 +4,7 @@ package net.littlelite.kotlinlearn
 class Polygon(sides: Int) {
 
     // Getters / Setters
-    var numberOfSides = sides;
+    var numberOfSides = sides
 
     /**
      * The companion method can be called as

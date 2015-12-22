@@ -22,7 +22,7 @@ fun loops() : Int {
 
     println()
 
-    var k=0;
+    var k=0
     while (k<10) {
         print(k++.toString())
         print(' ')

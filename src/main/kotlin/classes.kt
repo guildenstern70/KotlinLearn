@@ -13,8 +13,8 @@ package net.littlelite.kotlinlearn
 open class Person(firstName: String, lastName: String) {
 
     // Getters / Setters
-    var name = firstName;
-    var surname = lastName;
+    var name = firstName
+    var surname = lastName
 
     // The primary constructor cannot have any code
     // Initializer instructions can go into
@@ -32,7 +32,7 @@ open class Person(firstName: String, lastName: String) {
     }
 
     private fun changeName() {
-        this.name = "Pippo";
+        this.name = "Pippo"
     }
 
     override fun toString() : String {
