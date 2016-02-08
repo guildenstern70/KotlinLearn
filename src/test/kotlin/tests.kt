@@ -9,11 +9,11 @@
 
 
 import net.littlelite.kotlinlearn.*
-import kotlin.test.*
 
-import org.junit.Test
-import org.junit.After
-import org.junit.Before
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+
+import org.junit.*
 import java.io.File
 
 
