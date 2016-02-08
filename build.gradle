@@ -7,13 +7,11 @@ apply plugin: 'application'
 mainClassName = "net.littlelite.kotlinlearn.MainKt"
 
 buildscript {
-    ext.kotlin_version = '1.0.0-rc-1036'
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath group:'org.jetbrains.kotlin', name:'kotlin-gradle-plugin', version: kotlin_version
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -29,7 +27,6 @@ sourceSets {
 dependencies {
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: kotlin_version
     testCompile group: 'junit', name: 'junit', version: junit_version
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 
