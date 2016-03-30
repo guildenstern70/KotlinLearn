@@ -17,7 +17,7 @@ import org.junit.*
 import java.io.File
 
 
-public class Tests {
+class Tests {
 
     @Before fun setUp() {
         // set up the test case
@@ -120,6 +120,16 @@ public class Tests {
 
     @Test fun TestLambda() {
         assertEquals(16, lambdatest())
+    }
+
+    @Test fun TestSuits() {
+
+        val s1 = Suit.HEART
+        val s2 = Suit.DIAMOND
+
+        assertEquals("Diamonds", s2.toString())
+        assertEquals("Hearts", s1.toString())
+
     }
 }
 
