@@ -10,7 +10,7 @@
 
 package net.littlelite.kotlinlearn
 
-import java.util.ArrayList
+import java.util.*
 
 /**
 
@@ -34,6 +34,19 @@ fun collections(): Int {
     mutInt.add(5)
     mutInt.add(6)
     mutInt.add(7)
+
+    // HashMap
+    val dictiornary: HashMap<String, String>
+    dictiornary = hashMapOf("-x" to "One X",
+                            "-xx" to "Two X")
+
+    val sb = StringBuilder()
+
+    for ((k,v) in dictiornary) {
+
+        sb.append("$k = $v")
+
+    }
 
     var sum = value
 
