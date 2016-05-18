@@ -35,6 +35,11 @@ fun collections(): Int {
     mutInt.add(6)
     mutInt.add(7)
 
+    val mutStrings = mutableListOf<String>()
+    mutStrings.add("One")
+    mutStrings.add("Two")
+    mutStrings.add("Three")
+
     // HashMap
     val dictiornary: HashMap<String, String>
     dictiornary = hashMapOf("-x" to "One X",
