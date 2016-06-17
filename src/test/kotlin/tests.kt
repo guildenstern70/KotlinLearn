@@ -131,5 +131,14 @@ class Tests {
         assertEquals("Hearts", s1.toString())
 
     }
+
+    @Test fun TestMapEach() {
+        val valore = maps()
+        assertTrue(valore.startsWith("X"))
+
+        assertEquals(92, each())
+
+        assertEquals(6, filter())
+    }
 }
 

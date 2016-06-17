@@ -7,12 +7,12 @@ package net.littlelite.kotlinlearn
 
 import java.util.*
 
-public object NullSafety {
+object NullSafety {
 
     val given_words = "-ONE-,-TWO-,-THREE-,-FOUR-"
     var words = ArrayList<String>()
 
-    public fun storeWords() {
+    fun storeWords() {
 
         var sum=0
 
@@ -24,6 +24,15 @@ public object NullSafety {
         }
         println("Stored $sum words.")
 
+
+    }
+
+    fun runIfNotNull() {
+
+        val isNull = null
+        isNull?.let {
+            print(isNull)
+        }
 
     }
 
