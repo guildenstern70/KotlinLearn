@@ -11,7 +11,7 @@ package net.littlelite.kotlinlearn
 
 fun ifelse(a: Int, b: Int) : Int {
 
-    var max: Int
+    val max: Int
 
     // With else
     if (a > b)
@@ -26,7 +26,7 @@ fun ifelse(a: Int, b: Int) : Int {
 
 fun ifwhen(a: Int, b: Int) : Int {
 
-    var max: Int
+    val max: Int
 
     // As expression
     max = if (a > b) a else b

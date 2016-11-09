@@ -16,9 +16,9 @@ enum class Suit
 
         when (this)
         {
-            SPADE -> suits = "Spades";
-            CLUB -> suits = "Clubs";
-            HEART -> suits = "Hearts";
+            SPADE -> suits = "Spades"
+            CLUB -> suits = "Clubs"
+            HEART -> suits = "Hearts"
             else -> suits = "Diamonds"
         }
 

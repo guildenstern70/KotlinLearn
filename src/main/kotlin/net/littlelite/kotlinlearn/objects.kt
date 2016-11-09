@@ -12,7 +12,7 @@ package net.littlelite.kotlinlearn
 /**
  * Singleton object
  */
-public object AnObject {
+object AnObject {
 
     val id = "234"
 

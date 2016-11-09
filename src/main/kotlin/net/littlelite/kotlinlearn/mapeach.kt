@@ -39,7 +39,7 @@ fun each() : Int
 
     println()
     listItems.forEachIndexed { i, it ->
-        println((i+1).toString()+ "> " + it.toString())
+        println((i+1).toString()+ "> " + it)
     }
 
     println()

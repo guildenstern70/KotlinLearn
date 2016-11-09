@@ -30,7 +30,7 @@ fun collections(): Int {
     val otherInts = Array(5, {i -> (i * i)})
 
     // Mutables
-    var mutInt: ArrayList<Int> = ArrayList()
+    val mutInt: ArrayList<Int> = ArrayList()
     mutInt.add(5)
     mutInt.add(6)
     mutInt.add(7)

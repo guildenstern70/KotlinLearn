@@ -35,8 +35,8 @@ fun loops() : Int {
 
 fun ranges() {
 
-    var x = 0
-    var str = "islb"
+    val x = 0
+    val str = "islb"
 
     for (i in 1..10) { // equivalent of 1 <= i && i <= 10
         println(i)

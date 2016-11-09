@@ -1,6 +1,6 @@
 
 /**
- * Created by guildenstern1 on 23/06/15.
+ * Null Safety
  */
 
 package net.littlelite.kotlinlearn
