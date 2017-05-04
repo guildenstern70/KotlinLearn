@@ -31,7 +31,7 @@ object NullSafety {
 
         val isNull = null
         isNull?.let {
-            print(isNull)
+            println("Null is effectively null.")
         }
 
     }
