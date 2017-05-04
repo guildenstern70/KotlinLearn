@@ -1,0 +1,9 @@
+  # language setting
+language: java
+  # jdk tag
+jdk:
+ - openjdk8
+ - oraclejdk8
+build:
+  ci:
+    - gradle check
