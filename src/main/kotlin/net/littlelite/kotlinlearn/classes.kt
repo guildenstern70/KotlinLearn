@@ -23,8 +23,7 @@ open class Person(firstName: String, lastName: String) {
     }
 
     // Secondary constructor
-    constructor() : this("", "") {
-    }
+    constructor() : this("", "")
 
     open fun hello() {
         val name = this.toString()
@@ -47,9 +46,7 @@ open class Person(firstName: String, lastName: String) {
 
 class Student(firstName: String, lastName: String) : Person(firstName, lastName) {
 
-    constructor(p: Person) : this(p.name, p.surname) {
-
-    }
+    constructor(p: Person) : this(p.name, p.surname)
 
     override fun hello() {
         val name = this.toString()

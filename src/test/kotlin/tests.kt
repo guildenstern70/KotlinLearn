@@ -76,7 +76,7 @@ class Tests {
         alessio.name = "Alessio"
         alessio.surname = "Saltarin"
         alessio.hello()
-        var alessioStudente = Student(alessio)
+        val alessioStudente = Student(alessio)
         alessioStudente.hello()
         assertEquals("Alessio", alessioStudente.name)
         assertEquals("Saltarin", alessioStudente.surname)
