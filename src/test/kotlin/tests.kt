@@ -3,7 +3,7 @@
  * KOTLIN LEARN
  *
  * MIT License (MIT)
- * Copyright (c) 2015-16 Alessio Saltarin
+ * Copyright (c) 2015-17 Alessio Saltarin
  *
  */
 
@@ -29,14 +29,14 @@ class Tests {
     }
 
 
-    @Test fun TestSum() {
+    @Test fun testSum() {
 
         println("Function test: 5+7=" + sum(5,7).toString())
         assertEquals(12, sum(5,7))
 
     }
 
-    @Test fun TestSubtract() {
+    @Test fun testSubtract() {
 
         val minus = substract(7,5)
         println("Inline Function test: 7-5=" + minus.toString())
@@ -44,15 +44,15 @@ class Tests {
 
     }
 
-    @Test fun TestCollections() {
+    @Test fun testCollections() {
 
         val sum = collections()
         println("Collections Test => Sum = "+sum.toString())
-        assertEquals(sum, 141)
+        assertEquals(sum, 241)
 
     }
 
-    @Test fun TestLoops() {
+    @Test fun testLoops() {
 
         val sum = loops()
         println("Loops Test => Sum = "+sum.toString())
@@ -60,7 +60,7 @@ class Tests {
 
     }
 
-    @Test fun TestIfWhen() {
+    @Test fun testIfWhen() {
 
         val ifex = ifelse(4,5)
         assertEquals(ifex, 5)
@@ -70,7 +70,7 @@ class Tests {
 
     }
 
-    @Test fun TestClasses() {
+    @Test fun testClasses() {
 
         val alessio = Person()
         alessio.name = "Alessio"
@@ -83,14 +83,14 @@ class Tests {
 
     }
 
-    @Test fun TestObjects() {
+    @Test fun testObjects() {
         val obj = AnObject
         obj.hello()
         AnObject.hello()
         assertEquals("234", AnObject.id)
     }
 
-    @Test fun TestFiles() {
+    @Test fun testFiles() {
         createRandomTextFile()
         val tmpFile = File("tempfile.txt")
         assertTrue(tmpFile.exists())
@@ -100,17 +100,17 @@ class Tests {
         assertTrue(lines == 1)
     }
 
-    @Test fun TestNullSafety() {
+    @Test fun testNullSafety() {
         NullSafety.storeWords()
         assertEquals(NullSafety.words.count(), 4)
     }
 
-    @Test fun TestCompanion() {
+    @Test fun testCompanion() {
         val poly = Polygon.create(4)
         assertEquals(poly.numberOfSides, 4)
     }
 
-    @Test fun TestDataClass() {
+    @Test fun testDataClass() {
         val dc = User("Alessio", "Saltarin", 45)
         println("User Name: " + dc.component1())
         assertEquals("Alessio", dc.component1())
@@ -118,11 +118,11 @@ class Tests {
         assertEquals(45, dc.component3())
     }
 
-    @Test fun TestLambda() {
+    @Test fun testLambda() {
         assertEquals(16, lambdatest())
     }
 
-    @Test fun TestSuits() {
+    @Test fun testSuits() {
 
         val s1 = Suit.HEART
         val s2 = Suit.DIAMOND
@@ -132,13 +132,20 @@ class Tests {
 
     }
 
-    @Test fun TestMapEach() {
+    @Test fun testMapEach() {
         val valore = maps()
         assertTrue(valore.startsWith("X"))
-
         assertEquals(92, each())
-
         assertEquals(6, filter())
+    }
+
+    @Test fun testClosures() {
+        val two = 2
+        val four = 4
+
+        assertEquals(6, highOrderFunction(two, four, ::sum))
+        assertEquals(8, highOrderFunction(two, four, ::multiply))
+        assertEquals(55, closure())
     }
 }
 

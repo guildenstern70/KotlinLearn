@@ -3,7 +3,7 @@
  * KOTLIN LEARN
  *
  * MIT License (MIT)
- * Copyright (c) 2015-16 Alessio Saltarin
+ * Copyright (c) 2015-17 Alessio Saltarin
  *
  */
 
@@ -59,9 +59,11 @@ fun collections(): Int {
     val intSlice = ints.toList().slice(1..2)
     val listSlice = listInts.slice(1..2)
 
-    for (k in otherInts) {
-        for (i in ints) {
-            sum += (i+k)
+    for (k in intSlice) {
+        for (i in listSlice) {
+            for (j in otherInts) {
+                sum += (i+k+j)
+            }
         }
     }
 
