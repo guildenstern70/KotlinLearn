@@ -147,5 +147,11 @@ class Tests {
         assertEquals(8, highOrderFunction(two, four, ::multiply))
         assertEquals(55, closure())
     }
+
+    @Test fun testExtensions() {
+        val str = "Trial"
+
+        assertEquals("Trialpippo", str.addPippo(str))
+    }
 }
 

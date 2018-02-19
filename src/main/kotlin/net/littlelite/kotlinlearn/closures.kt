@@ -27,7 +27,7 @@ fun highOrderFunction(a: Int, b: Int, operation: (a: Int, b: Int) -> Int): Int {
  * @sample
  *     highOrderFunction(3,4, ::sum)
  */
-fun highOrderFunctionWithLambda(a: Int, b: Int, operation: (a: Int, b: Int) -> Int): Int {
+fun highOrderFunctionWithLambda(a: Int, b: Int): Int {
     return highOrderFunction(a, b, lambdaFunction)
 }
 
