@@ -16,7 +16,7 @@ import java.util.*
  */
 object NullSafety {
 
-    val given_words = "-ONE-,-TWO-,-THREE-,-FOUR-"
+    private const val given_words = "-ONE-,-TWO-,-THREE-,-FOUR-"
     var words = ArrayList<String>()
 
     fun storeWords() {

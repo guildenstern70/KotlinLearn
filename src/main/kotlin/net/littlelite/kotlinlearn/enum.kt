@@ -21,17 +21,14 @@ enum class Suit
 
     override fun toString(): String
     {
-        val suits : String
-
-        when (this)
+        return when (this)
         {
-            SPADE -> suits = "Spades"
-            CLUB -> suits = "Clubs"
-            HEART -> suits = "Hearts"
-            else -> suits = "Diamonds"
+            SPADE -> "Spades"
+            CLUB -> "Clubs"
+            HEART -> "Hearts"
+            else -> "Diamonds"
         }
 
-        return suits
     }
 
 

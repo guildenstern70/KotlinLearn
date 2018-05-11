@@ -12,7 +12,7 @@ package net.littlelite.kotlinlearn
 
 fun loops() : Int {
 
-    var sum : Int = 0
+    var sum = 0
 
     for (j in Array(10, {i -> i})) {
         print(j.toString())

@@ -30,7 +30,7 @@ fun maps() : String
     printList(listIndexes)
 
     val listX = listStrings.map {
-        "X" + it
+        "X$it"
     }
 
     printList(listX)

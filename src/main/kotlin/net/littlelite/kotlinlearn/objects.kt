@@ -14,7 +14,7 @@ package net.littlelite.kotlinlearn
  */
 object AnObject {
 
-    val id = "234"
+    const val id = "234"
 
     fun hello() {
         println("Hello I am object #$id")
