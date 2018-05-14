@@ -9,13 +9,10 @@
 
 package net.littlelite.kotlinlearn
 
-import java.util.*
-
 /**
  *
  */
-fun maps() : String
-{
+fun maps(): String {
 
     val listStrings = listOf("aaa", "bbb", "ccc")
 
@@ -24,7 +21,7 @@ fun maps() : String
 
     val listIndexes = listStrings.mapIndexed {
         i, s ->
-        (i+1).toString() + ") " + s
+        ( i + 1 ).toString() + ") " + s
     }
 
     printList(listIndexes)
@@ -35,11 +32,9 @@ fun maps() : String
 
     printList(listX)
     return listX[0]
-
 }
 
-fun each() : Int
-{
+fun each(): Int {
     val listInt = listOf(1, 3, 5, 6, 77)
     val listItems = listOf("One", "Two", "Three")
 
@@ -48,7 +43,7 @@ fun each() : Int
 
     println()
     listItems.forEachIndexed { i, it ->
-        println((i+1).toString()+ "> " + it)
+        println(( i + 1 ).toString() + "> " + it)
     }
 
     println()
@@ -57,7 +52,7 @@ fun each() : Int
     // Take a list and build another list of another type
     val anotherList = ArrayList<String>()
     listInt.forEach {
-        item->
+        item ->
         anotherList.add("*" + item.toString() + "*")
     }
     printList(anotherList)
@@ -65,26 +60,22 @@ fun each() : Int
     return sum
 }
 
-fun filter() : Int
-{
+fun filter(): Int {
     val listInt = listOf(1, 3, 5, 6, 77)
 
     val filteredList = listInt.filter { it % 2 == 0 }
 
-    val sum =  filteredList.sum()
+    val sum = filteredList.sum()
 
     println()
     println("Sum = $sum")
 
     return sum
-
 }
 
-fun printList(listItems: List<Any>)
-{
+fun printList(listItems: List<Any>) {
     println()
-    for (item in listItems)
-    {
+    for (item in listItems) {
         print(item.toString())
         print(" ")
     }

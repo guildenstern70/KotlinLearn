@@ -40,4 +40,3 @@ fun closure(): Int {
     (1..10).forEach { sum += it }
     return sum
 }
-

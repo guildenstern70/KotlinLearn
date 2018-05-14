@@ -7,7 +7,6 @@
  *
  */
 
-
 package net.littlelite.kotlinlearn
 
 open class Person(firstName: String, lastName: String) {
@@ -34,14 +33,13 @@ open class Person(firstName: String, lastName: String) {
         this.name = "Pippo"
     }
 
-    override fun toString() : String {
+    override fun toString(): String {
         val sb = StringBuilder()
         sb.append(this.name)
         sb.append(' ')
         sb.append(this.surname)
         return sb.toString()
     }
-
 }
 
 class Student(firstName: String, lastName: String) : Person(firstName, lastName) {
@@ -52,5 +50,4 @@ class Student(firstName: String, lastName: String) : Person(firstName, lastName)
         val name = this.toString()
         println("Hello, my name is $name and I'm a student.")
     }
-
 }

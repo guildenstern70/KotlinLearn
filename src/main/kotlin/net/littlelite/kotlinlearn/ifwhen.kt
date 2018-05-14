@@ -9,7 +9,7 @@
 
 package net.littlelite.kotlinlearn
 
-fun ifelse(a: Int, b: Int) : Int {
+fun ifelse(a: Int, b: Int): Int {
 
     return if (a > b)
         a
@@ -17,8 +17,7 @@ fun ifelse(a: Int, b: Int) : Int {
         b
 }
 
-
-fun ifwhen(a: Int, b: Int) : Int {
+fun ifwhen(a: Int, b: Int): Int {
 
     val max: Int = if (a > b) a else b
 
@@ -32,7 +31,7 @@ fun ifwhen(a: Int, b: Int) : Int {
         }
     }
 
-    val validNumbers = arrayOf(1,2,3,4)
+    val validNumbers = arrayOf(1, 2, 3, 4)
 
     when (max) {
         in 1..10 -> println("max is in the range")
@@ -44,6 +43,4 @@ fun ifwhen(a: Int, b: Int) : Int {
     println("max = " + max.toString())
 
     return max
-
 }
-

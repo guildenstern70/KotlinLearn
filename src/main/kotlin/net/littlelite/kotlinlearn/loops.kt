@@ -9,12 +9,11 @@
 
 package net.littlelite.kotlinlearn
 
-
-fun loops() : Int {
+fun loops(): Int {
 
     var sum = 0
 
-    for (j in Array(10, {i -> i})) {
+    for (j in Array(10, { i -> i })) {
         print(j.toString())
         print(' ')
         sum += j
@@ -22,15 +21,14 @@ fun loops() : Int {
 
     println()
 
-    var k=0
-    while (k<10) {
+    var k = 0
+    while ( k < 10 ) {
         print(k++.toString())
         print(' ')
         sum += k
     }
 
     return sum // should be 100
-
 }
 
 fun ranges() {
@@ -47,5 +45,4 @@ fun ranges() {
     if (x !in 1.0..3.0) println(x)
 
     if (str in "island".."isle") println(str)
-
 }

@@ -9,7 +9,7 @@
 
 package net.littlelite.kotlinlearn
 
-import java.util.*
+import java.util.StringTokenizer
 
 /**
  * Null Safety
@@ -21,7 +21,7 @@ object NullSafety {
 
     fun storeWords() {
 
-        var sum=0
+        var sum = 0
 
         val strTok = StringTokenizer(given_words, ",")
         while (strTok.hasMoreElements()) {
@@ -30,24 +30,16 @@ object NullSafety {
             sum++
         }
         println("Stored $sum words.")
-
-
     }
 
     fun runIfNotNull() {
-
         val isNull = null
         isNull?.let {
             println("Null is effectively null.")
         }
-
     }
 
-    private fun stripVirg(word: String) : String {
-
-        return word.substring(1, word.length - 1)
-
+    private fun stripVirg(word: String): String {
+        return word.substring( 1, word.length - 1 )
     }
-
 }
-

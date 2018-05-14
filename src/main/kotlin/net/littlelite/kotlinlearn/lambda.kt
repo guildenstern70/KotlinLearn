@@ -17,14 +17,13 @@ val anonFun = fun(x: Int, y: Int): Int {
     return x + y
 }
 
-fun lambdatest() : Int {
+fun lambdatest(): Int {
 
-    val sum53 = lambdaSum(5,3)
+    val sum53 = lambdaSum(5, 3)
     println("Sum 5+3 = $sum53")
 
     val anonsum53 = anonFun(5, 3)
     println("Sum 5+3 = $anonsum53")
 
     return (sum53 + anonsum53)
-
 }

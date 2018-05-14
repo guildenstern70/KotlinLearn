@@ -9,17 +9,16 @@
 
 package net.littlelite.kotlinlearn
 
-class Polygon(sides: Int) {
+class Companion(sides: Int) {
 
     // Getters / Setters
     var numberOfSides = sides
 
     /**
      * The companion method can be called as
-     * Polygon.create(4)
+     * Companion.create(4)
      */
     companion object Factory {
-        fun create(sides: Int): Polygon = Polygon(sides)
+        fun create(sides: Int): Companion = Companion(sides)
     }
-
 }

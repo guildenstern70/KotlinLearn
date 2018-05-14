@@ -7,27 +7,22 @@
  *
  */
 
-
 package net.littlelite.kotlinlearn
 
-import java.util.*
-
 /**
-
     Collections
-
  */
 fun collections(): Int {
 
     // Immutables
-    val ints : Array<Int> = arrayOf(1,2,3)
-    val listInts: List<Int> = listOf(1,2,3)  // ordered
+    val ints: Array<Int> = arrayOf(1, 2, 3)
+    val listInts: List<Int> = listOf(1, 2, 3) // ordered
 
     // Access array item
     val value = ints[2]
 
     // Array creation function
-    val otherInts = Array(5, {i -> (i * i)})
+    val otherInts = Array(5, { i -> (i * i) })
 
     // Mutables
     val mutInt: ArrayList<Int> = ArrayList()
@@ -47,10 +42,8 @@ fun collections(): Int {
 
     val sb = StringBuilder()
 
-    for ((k,v) in dictionary) {
-
+    for ((k, v) in dictionary) {
         sb.append("$k = $v")
-
     }
 
     var sum = value
@@ -62,7 +55,7 @@ fun collections(): Int {
     for (k in intSlice) {
         for (i in listSlice) {
             for (j in otherInts) {
-                sum += (i+k+j)
+                sum += (i + k + j)
             }
         }
     }
@@ -72,5 +65,4 @@ fun collections(): Int {
     }
 
     return sum
-
 }

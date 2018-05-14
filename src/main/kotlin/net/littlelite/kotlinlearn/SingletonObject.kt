@@ -12,12 +12,10 @@ package net.littlelite.kotlinlearn
 /**
  * Singleton object
  */
-object AnObject {
-
+object SingletonObject {
     const val id = "234"
 
     fun hello() {
         println("Hello I am object #$id")
     }
-
 }

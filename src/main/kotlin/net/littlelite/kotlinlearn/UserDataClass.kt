@@ -18,7 +18,4 @@ package net.littlelite.kotlinlearn
  * - copy
  * - componentN
  */
-data class User(val name: String, val surname: String, val age: Int)
-
-
-
+data class UserDataClass(val name: String, val surname: String, val age: Int)

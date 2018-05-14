@@ -12,13 +12,8 @@ package net.littlelite.kotlinlearn
 const val VERSION: String = "0.3"
 
 fun main(args: Array<String>) {
-
     println()
     println("Kotlin Learn v.$VERSION")
     println()
     println("Run tests to check output.")
-
 }
-
-
-

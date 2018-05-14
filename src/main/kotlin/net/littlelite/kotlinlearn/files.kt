@@ -10,7 +10,8 @@
 package net.littlelite.kotlinlearn
 
 import java.io.File
-import java.util.*
+import java.util.Random
+import java.util.StringTokenizer
 
 fun createRandomTextFile() {
 
@@ -26,11 +27,9 @@ fun createRandomTextFile() {
         theFile.delete()
     }
     theFile.writeText(sb.toString())
-
 }
 
-fun readFileLineByLine() : Int {
-
+fun readFileLineByLine(): Int {
     val theFile = File("tempfile.txt")
     var count = 0
 
@@ -39,20 +38,16 @@ fun readFileLineByLine() : Int {
             println(line)
             count++
         }
-    }
-    else {
+    } else {
         println("File not found.")
     }
 
     println("Lines read: $count")
 
     return count
-
 }
 
-
-fun sumContentsOfFile() : Int {
-
+fun sumContentsOfFile(): Int {
     var sum = -1
     val theFile = File("tempfile.txt")
     if (theFile.exists()) {
@@ -60,15 +55,13 @@ fun sumContentsOfFile() : Int {
         val contents = theFile.readText()
         val strTk = StringTokenizer(contents, ",")
         while (strTk.hasMoreElements()) {
-            val tmp : String? = strTk.nextElement() as? String
+            val tmp: String? = strTk.nextElement() as? String
             val itmp = Integer.parseInt(tmp)
             sum += itmp
         }
-    }
-    else {
+    } else {
         println("File not found.")
     }
 
     return sum
-
 }

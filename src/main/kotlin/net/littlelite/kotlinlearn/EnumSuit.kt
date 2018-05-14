@@ -12,8 +12,7 @@ package net.littlelite.kotlinlearn
 /**
  * Enum class
  */
-enum class Suit
-{
+enum class EnumSuit {
     SPADE,
     CLUB,
     HEART,
@@ -21,15 +20,11 @@ enum class Suit
 
     override fun toString(): String
     {
-        return when (this)
-        {
+        return when (this) {
             SPADE -> "Spades"
             CLUB -> "Clubs"
             HEART -> "Hearts"
             else -> "Diamonds"
         }
-
     }
-
-
 }

@@ -7,15 +7,12 @@
  *
  */
 
-
-import net.littlelite.kotlinlearn.*
-
+import net.littlelite.kotlinlearn.* // ktlint-disable no-wildcard-imports
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 
-import org.junit.*
+import org.junit.* // ktlint-disable no-wildcard-imports
 import java.io.File
-
 
 class Tests {
 
@@ -28,50 +25,38 @@ class Tests {
         if (tmpFile.exists()) tmpFile.delete()
     }
 
-
     @Test fun testSum() {
-
-        println("Function test: 5+7=" + sum(5,7).toString())
-        assertEquals(12, sum(5,7))
-
+        println("Function test: 5 + 7 = " + sum(5, 7).toString())
+        assertEquals(12, sum(5, 7))
     }
 
     @Test fun testSubtract() {
-
-        val minus = substract(7,5)
-        println("Inline Function test: 7-5=" + minus.toString())
+        val minus = substract(7, 5)
+        println("Inline Function test: 7 - 5 = " + minus.toString())
         assertEquals(minus, 2)
-
     }
 
     @Test fun testCollections() {
-
         val sum = collections()
-        println("Collections Test => Sum = "+sum.toString())
+        println("Collections Test => Sum = " + sum.toString())
         assertEquals(sum, 241)
-
     }
 
     @Test fun testLoops() {
-
         val sum = loops()
-        println("Loops Test => Sum = "+sum.toString())
+        println("Loops Test => Sum = " + sum.toString())
         assertEquals(sum, 100)
-
     }
 
     @Test fun testIfWhen() {
-
-        val ifex = ifelse(4,5)
+        val ifex = ifelse(4, 5)
         assertEquals(ifex, 5)
-        val max = ifwhen(3,4)
-        println("IfWhen Test => Max = "+max.toString())
+        val max = ifwhen(3, 4)
+        println("IfWhen Test => Max = " + max.toString())
         assertEquals(max, 4)
-
     }
 
     @Test fun testClasses() {
-
         val alessio = Person()
         alessio.name = "Alessio"
         alessio.surname = "Saltarin"
@@ -80,14 +65,13 @@ class Tests {
         alessioStudente.hello()
         assertEquals("Alessio", alessioStudente.name)
         assertEquals("Saltarin", alessioStudente.surname)
-
     }
 
     @Test fun testObjects() {
-        val obj = AnObject
+        val obj = SingletonObject
         obj.hello()
-        AnObject.hello()
-        assertEquals("234", AnObject.id)
+        SingletonObject.hello()
+        assertEquals("234", SingletonObject.id)
     }
 
     @Test fun testFiles() {
@@ -106,13 +90,13 @@ class Tests {
     }
 
     @Test fun testCompanion() {
-        val poly = Polygon.create(4)
+        val poly = Companion.create(4)
         assertEquals(poly.numberOfSides, 4)
     }
 
     @Test fun testDataClass() {
-        val dc = User("Alessio", "Saltarin", 45)
-        println("User Name: " + dc.component1())
+        val dc = UserDataClass("Alessio", "Saltarin", 45)
+        println("UserDataClass Name: " + dc.component1())
         assertEquals("Alessio", dc.component1())
         assertEquals("Saltarin", dc.component2())
         assertEquals(45, dc.component3())
@@ -123,13 +107,10 @@ class Tests {
     }
 
     @Test fun testSuits() {
-
-        val s1 = Suit.HEART
-        val s2 = Suit.DIAMOND
-
+        val s1 = EnumSuit.HEART
+        val s2 = EnumSuit.DIAMOND
         assertEquals("Diamonds", s2.toString())
         assertEquals("Hearts", s1.toString())
-
     }
 
     @Test fun testMapEach() {
@@ -142,7 +123,6 @@ class Tests {
     @Test fun testClosures() {
         val two = 2
         val four = 4
-
         assertEquals(6, highOrderFunction(two, four, ::sum))
         assertEquals(8, highOrderFunction(two, four, ::multiply))
         assertEquals(55, closure())
@@ -150,8 +130,6 @@ class Tests {
 
     @Test fun testExtensions() {
         val str = "Trial"
-
         assertEquals("Trialpippo", str.addPippo(str))
     }
 }
-
