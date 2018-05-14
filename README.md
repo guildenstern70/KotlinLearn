@@ -1,6 +1,7 @@
 # KotlinLearn
 
 [![Run Status](https://api.shippable.com/projects/590adb9050821b070081ed62/badge?branch=master)](https://app.shippable.com/github/guildenstern70/KotlinLearn)
+[![CircleCI](https://circleci.com/gh/guildenstern70/KotlinLearn.svg?style=svg)](https://circleci.com/gh/guildenstern70/KotlinLearn)
 
 A collection of simple source code examples in Kotlin, featuring key aspects of the language.
 
