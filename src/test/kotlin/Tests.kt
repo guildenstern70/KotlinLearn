@@ -134,6 +134,6 @@ class Tests {
     }
 
     @Test fun interfaces() {
-        assertEquals(29, InterfaceTest())
+        assertEquals(29, interfaceTest())
     }
 }

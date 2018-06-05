@@ -24,7 +24,7 @@ class Child : InterfaceWProperties {
     override val prop: Int = 29
 }
 
-fun InterfaceTest() : Int
+fun interfaceTest(): Int
 {
     val child = Child()
     return child.prop
