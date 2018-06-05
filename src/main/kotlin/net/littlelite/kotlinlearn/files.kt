@@ -3,7 +3,7 @@
  * KOTLIN LEARN
  *
  * MIT License (MIT)
- * Copyright (c) 2015-17 Alessio Saltarin
+ * Copyright (c) 2015-18 Alessio Saltarin
  *
  */
 

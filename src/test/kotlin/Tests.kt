@@ -3,7 +3,7 @@
  * KOTLIN LEARN
  *
  * MIT License (MIT)
- * Copyright (c) 2015-17 Alessio Saltarin
+ * Copyright (c) 2015-18 Alessio Saltarin
  *
  */
 
@@ -131,5 +131,9 @@ class Tests {
     @Test fun testExtensions() {
         val str = "Trial"
         assertEquals("Trialpippo", str.addPippo(str))
+    }
+
+    @Test fun interfaces() {
+        assertEquals(29, InterfaceTest())
     }
 }
