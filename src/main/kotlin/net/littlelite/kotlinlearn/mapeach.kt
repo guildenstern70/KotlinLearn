@@ -21,7 +21,7 @@ fun maps(): String {
 
     val listIndexes = listStrings.mapIndexed {
         i, s ->
-        ( i + 1 ).toString() + ") " + s
+        (i + 1).toString() + ") " + s
     }
 
     printList(listIndexes)
@@ -43,7 +43,7 @@ fun each(): Int {
 
     println()
     listItems.forEachIndexed { i, it ->
-        println(( i + 1 ).toString() + "> " + it)
+        println((i + 1).toString() + "> " + it)
     }
 
     println()

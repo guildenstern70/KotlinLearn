@@ -40,6 +40,6 @@ object NullSafety {
     }
 
     private fun stripVirg(word: String): String {
-        return word.substring( 1, word.length - 1 )
+        return word.substring(1, word.length - 1)
     }
 }

@@ -22,7 +22,6 @@ fun ifwhen(a: Int, b: Int): Int {
     val max: Int = if (a > b) a else b
 
     // As expression
-
     when (max) {
         1 -> println("max == 1")
         2 -> println("max == 2")
