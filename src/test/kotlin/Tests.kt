@@ -65,6 +65,8 @@ class Tests {
         alessioStudente.hello()
         assertEquals("Alessio", alessioStudente.name)
         assertEquals("Saltarin", alessioStudente.surname)
+        val alessioShortcut = StudentShortcut("Alessio", "Romani")
+        assertEquals("Alessio", alessioShortcut.name)
     }
 
     @Test fun testObjects() {

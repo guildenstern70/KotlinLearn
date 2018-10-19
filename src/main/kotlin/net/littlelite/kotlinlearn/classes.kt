@@ -51,3 +51,6 @@ class Student(firstName: String, lastName: String) : Person(firstName, lastName)
         println("Hello, my name is $name and I'm a student.")
     }
 }
+
+class StudentShortcut(private val firstName: String, private val lastName: String):
+        Person(firstName, lastName)
