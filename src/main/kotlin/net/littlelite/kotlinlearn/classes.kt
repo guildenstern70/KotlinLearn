@@ -52,5 +52,5 @@ class Student(firstName: String, lastName: String) : Person(firstName, lastName)
     }
 }
 
-class StudentShortcut(private val firstName: String, private val lastName: String):
+class StudentShortcut(private val firstName: String, private val lastName: String) :
         Person(firstName, lastName)
