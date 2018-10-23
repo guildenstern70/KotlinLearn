@@ -7,3 +7,5 @@ jdk:
 build:
   ci:
     - gradle check
+    - source shipctl jdk set oraclejdk8
+
