@@ -1,8 +1,7 @@
 # KotlinLearn
 
-[![Run Status](https://api.shippable.com/projects/590adb9050821b070081ed62/badge?branch=master)](https://app.shippable.com/github/guildenstern70/KotlinLearn)
+[![CircleCI](https://circleci.com/gh/guildenstern70/KotlinLearn/tree/master.svg?style=svg)](https://circleci.com/gh/guildenstern70/KotlinLearn/tree/master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![CircleCI](https://circleci.com/gh/guildenstern70/KotlinLearn.svg?style=svg)](https://circleci.com/gh/guildenstern70/KotlinLearn)
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 
 A collection of simple source code examples in Kotlin, featuring key aspects of the language.
