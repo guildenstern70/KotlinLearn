@@ -22,7 +22,7 @@ fun collections(): Int {
     val value = ints[2]
 
     // Array creation function
-    val otherInts = Array(5, { i -> (i * i) })
+    val otherInts = Array(5) { i -> (i * i) }
 
     // Mutables
     val mutInt: ArrayList<Int> = ArrayList()

@@ -13,7 +13,7 @@ fun loops(): Int {
 
     var sum = 0
 
-    for (j in Array(10, { i -> i })) {
+    for (j in Array(10) { i -> i }) {
         print(j.toString())
         print(' ')
         sum += j
@@ -42,7 +42,7 @@ fun ranges() {
 
     for (i in 1..4 step 2) print(i) // prints "13"
 
-    if (x !in 1.0..3.0) println(x)
+    if (x !in 1..3) println(x)
 
     if (str in "island".."isle") println(str)
 }

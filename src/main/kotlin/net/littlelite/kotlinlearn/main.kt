@@ -9,7 +9,7 @@
 
 package net.littlelite.kotlinlearn
 
-const val VERSION: String = "0.3"
+const val VERSION: String = "0.3.1"
 
 fun main(args: Array<String>) {
     println()

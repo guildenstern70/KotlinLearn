@@ -15,3 +15,10 @@ A collection of simple source code examples in Kotlin, featuring key aspects of 
 5. Compile with _gradle assemble_
 6. Run with _gradle run_
 7. Run tests with _gradle check_
+
+[View Gradle Build Scan](https://scans.gradle.com/s/zrtslterzwpzg/)
+
+
+
+
+
