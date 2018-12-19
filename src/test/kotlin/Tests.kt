@@ -122,6 +122,11 @@ class Tests {
         assertEquals(6, filter())
     }
 
+    @Test fun testTake() {
+        val value = take()
+        assertEquals(1, value)
+    }
+
     @Test fun testClosures() {
         val two = 2
         val four = 4

@@ -34,6 +34,19 @@ fun maps(): String {
     return listX[0]
 }
 
+fun take(): Int {
+
+    val list = listOf(1, 2, 3, 4, 5, 6)
+
+    val firstThree = list.take(3)
+    printList(firstThree)
+
+    val firstSix = list.take(7)
+    printList(firstSix)
+
+    return firstSix[0]
+}
+
 fun each(): Int {
     val listInt = listOf(1, 3, 5, 6, 77)
     val listItems = listOf("One", "Two", "Three")
