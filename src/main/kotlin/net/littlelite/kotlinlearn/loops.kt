@@ -46,6 +46,23 @@ fun arraysWithIndices(): Int {
 
 }
 
+fun breakloop(): Int {
+
+    val commands = listOf("Start", "Stop", "Restore")
+    var commandFound = 0
+
+    // LoopCommands is a break label
+    loopcommands@ for ( (index, command) in commands.withIndex() ) {
+        if (command == "Stop") {
+            commandFound = index
+            break@loopcommands
+        }
+
+    }
+
+    return commandFound
+}
+
 fun ranges() {
 
     val x = 0
