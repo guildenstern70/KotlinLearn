@@ -31,6 +31,21 @@ fun loops(): Int {
     return sum // should be 100
 }
 
+fun arraysWithIndices(): Int {
+
+    val fruits = listOf("Banana", "Apple", "Mango")
+    var sum = 0
+    println()
+
+    for ((index, value) in fruits.withIndex()) {
+        sum += index
+        println("the element at $index is $value")
+    }
+
+    return sum
+
+}
+
 fun ranges() {
 
     val x = 0

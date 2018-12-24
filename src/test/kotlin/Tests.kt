@@ -44,8 +44,9 @@ class Tests {
 
     @Test fun testLoops() {
         val sum = loops()
-        println("Loops Test => Sum = " + sum.toString())
+        val sum2 = arraysWithIndices()
         assertEquals(sum, 100)
+        assertEquals(sum2, 3)
     }
 
     @Test fun testIfWhen() {
