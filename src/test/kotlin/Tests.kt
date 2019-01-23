@@ -48,6 +48,12 @@ class Tests {
         assertEquals(sum, 100)
     }
 
+    @Test fun testForEachIndexed() {
+        val sum = forEachIndexed()
+        println("For Each Indexed Test => Sum = " + sum.toString())
+        assertEquals(sum, 3)
+    }
+
     @Test fun testIfWhen() {
         val ifex = ifelse(4, 5)
         assertEquals(ifex, 5)

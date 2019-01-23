@@ -31,6 +31,16 @@ fun loops(): Int {
     return sum // should be 100
 }
 
+fun forEachIndexed(): Int {
+    val collection = listOf("Banana", "Apple", "Mango")
+    var sum = 0
+    collection.forEachIndexed { index, element ->
+        sum += index
+        print("$index => $element")
+    }
+    return sum
+}
+
 fun ranges() {
 
     val x = 0
