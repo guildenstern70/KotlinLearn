@@ -44,8 +44,11 @@ class Tests {
 
     @Test fun testLoops() {
         val sum = loops()
-        println("Loops Test => Sum = " + sum.toString())
+        val sum2 = arraysWithIndices()
+        val index = breakloop()
         assertEquals(sum, 100)
+        assertEquals(sum2, 3)
+        assertEquals(index, 1)
     }
 
     @Test fun testForEachIndexed() {

@@ -31,6 +31,38 @@ fun loops(): Int {
     return sum // should be 100
 }
 
+fun arraysWithIndices(): Int {
+
+    val fruits = listOf("Banana", "Apple", "Mango")
+    var sum = 0
+    println()
+
+    for ((index, value) in fruits.withIndex()) {
+        sum += index
+        println("the element at $index is $value")
+    }
+
+    return sum
+
+}
+
+fun breakloop(): Int {
+
+    val commands = listOf("Start", "Stop", "Restore")
+    var commandFound = 0
+
+    // LoopCommands is a break label
+    loopcommands@ for ( (index, command) in commands.withIndex() ) {
+        if (command == "Stop") {
+            commandFound = index
+            break@loopcommands
+        }
+
+    }
+
+    return commandFound
+}
+
 fun forEachIndexed(): Int {
     val collection = listOf("Banana", "Apple", "Mango")
     var sum = 0
