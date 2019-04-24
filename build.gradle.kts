@@ -9,8 +9,8 @@
 
 plugins {
     application
-    id("com.gradle.build-scan") version "1.16"
-    kotlin("jvm") version "1.3.10"
+    id("com.gradle.build-scan") version "2.2.1"
+    kotlin("jvm") version "1.3.30"
 }
 
 repositories {
@@ -22,7 +22,7 @@ application {
 }
 
 buildScan {
-    setTermsOfServiceUrl("https://gradle.com/terms-of-service")
+    termsOfServiceUrl = "https://gradle.com/terms-of-service"
     setTermsOfServiceAgree("yes")
 }
 
