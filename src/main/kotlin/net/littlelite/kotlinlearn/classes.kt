@@ -24,6 +24,9 @@ open class Person(firstName: String, lastName: String) {
     // Secondary constructor
     constructor() : this("", "")
 
+    // Property
+    var fullName = "$firstName $lastName"
+
     open fun hello() {
         val name = this.toString()
         println("Hello, my name is $name")
