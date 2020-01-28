@@ -45,7 +45,8 @@ open class Person(firstName: String, lastName: String) {
     }
 }
 
-class Student(firstName: String, lastName: String) : Person(firstName, lastName) {
+class Student(firstName: String, lastName: String) :
+        Person(firstName, lastName) {
 
     constructor(p: Person) : this(p.name, p.surname)
 

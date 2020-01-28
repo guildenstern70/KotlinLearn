@@ -9,8 +9,7 @@
 
 plugins {
     application
-    id("com.gradle.build-scan") version "2.2.1"
-    kotlin("jvm") version "1.3.30"
+    id("org.jetbrains.kotlin.jvm") version "1.3.61"
 }
 
 repositories {
@@ -19,11 +18,6 @@ repositories {
 
 application {
     mainClassName = "net.littlelite.kotlinlearn.MainKt"
-}
-
-buildScan {
-    termsOfServiceUrl = "https://gradle.com/terms-of-service"
-    setTermsOfServiceAgree("yes")
 }
 
 dependencies {
