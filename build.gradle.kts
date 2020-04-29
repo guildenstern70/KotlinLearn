@@ -6,14 +6,6 @@
  *
  */
 
-/**
- *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
- *
- */
 
 plugins {
     application
