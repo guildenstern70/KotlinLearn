@@ -1,15 +1,15 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
 package net.littlelite.kotlinlearn
 
-open class Person(firstName: String, lastName: String) {
+open class Person(firstName: String, lastName: String)
+{
 
     // Getters / Setters
     var name = firstName
@@ -17,7 +17,8 @@ open class Person(firstName: String, lastName: String) {
 
     // The primary constructor cannot have any code
     // Initializer instructions can go into
-    init {
+    init
+    {
         // logger.info...
     }
 
@@ -27,16 +28,19 @@ open class Person(firstName: String, lastName: String) {
     // Property
     var fullName = "$firstName $lastName"
 
-    open fun hello() {
+    open fun hello()
+    {
         val name = this.toString()
         println("Hello, my name is $name")
     }
 
-    private fun changeName() {
+    private fun changeName()
+    {
         this.name = "Pippo"
     }
 
-    override fun toString(): String {
+    override fun toString(): String
+    {
         val sb = StringBuilder()
         sb.append(this.name)
         sb.append(' ')
@@ -46,11 +50,13 @@ open class Person(firstName: String, lastName: String) {
 }
 
 class Student(firstName: String, lastName: String) :
-        Person(firstName, lastName) {
+        Person(firstName, lastName)
+{
 
     constructor(p: Person) : this(p.name, p.surname)
 
-    override fun hello() {
+    override fun hello()
+    {
         val name = this.toString()
         println("Hello, my name is $name and I'm a student.")
     }

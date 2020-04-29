@@ -1,3 +1,11 @@
+/*
+ *  KOTLIN LEARN
+ *
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
+ *
+ */
+
 /**
  *
  * KOTLIN LEARN
@@ -9,7 +17,7 @@
 
 plugins {
     application
-    id("org.jetbrains.kotlin.jvm") version "1.3.61"
+    id("org.jetbrains.kotlin.jvm") version "1.3.72"
 }
 
 repositories {

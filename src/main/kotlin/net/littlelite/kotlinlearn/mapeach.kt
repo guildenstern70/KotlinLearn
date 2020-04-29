@@ -1,9 +1,8 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
@@ -12,15 +11,15 @@ package net.littlelite.kotlinlearn
 /**
  *
  */
-fun maps(): String {
+fun maps(): String
+{
 
     val listStrings = listOf("aaa", "bbb", "ccc")
 
     println("Initial List: ")
     printList(listStrings)
 
-    val listIndexes = listStrings.mapIndexed {
-        i, s ->
+    val listIndexes = listStrings.mapIndexed { i, s ->
         (i + 1).toString() + ") " + s
     }
 
@@ -34,7 +33,8 @@ fun maps(): String {
     return listX[0]
 }
 
-fun take(): Int {
+fun take(): Int
+{
 
     val list = listOf(1, 2, 3, 4, 5, 6)
 
@@ -47,7 +47,8 @@ fun take(): Int {
     return firstSix[0]
 }
 
-fun each(): Int {
+fun each(): Int
+{
     val listInt = listOf(1, 3, 5, 6, 77)
     val listItems = listOf("One", "Two", "Three")
 
@@ -64,8 +65,7 @@ fun each(): Int {
 
     // Take a list and build another list of another type
     val anotherList = ArrayList<String>()
-    listInt.forEach {
-        item ->
+    listInt.forEach { item ->
         anotherList.add("*" + item.toString() + "*")
     }
     printList(anotherList)
@@ -73,7 +73,8 @@ fun each(): Int {
     return sum
 }
 
-fun filter(): Int {
+fun filter(): Int
+{
     val listInt = listOf(1, 3, 5, 6, 77)
 
     val filteredList = listInt.filter { it % 2 == 0 }
@@ -86,9 +87,11 @@ fun filter(): Int {
     return sum
 }
 
-fun printList(listItems: List<Any>) {
+fun printList(listItems: List<Any>)
+{
     println()
-    for (item in listItems) {
+    for (item in listItems)
+    {
         print(item.toString())
         print(" ")
     }

@@ -1,26 +1,28 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
 package net.littlelite.kotlinlearn
 
-interface InterfaceWProperties {
+interface InterfaceWProperties
+{
     val prop: Int // abstract
 
     val propertyWithImplementation: String
         get() = "foo"
 
-    fun foo() {
+    fun foo()
+    {
         print(prop)
     }
 }
 
-class Child : InterfaceWProperties {
+class Child : InterfaceWProperties
+{
     override val prop: Int = 29
 }
 

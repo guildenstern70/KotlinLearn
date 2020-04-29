@@ -1,9 +1,8 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
@@ -12,7 +11,8 @@ package net.littlelite.kotlinlearn
 /**
  * Enum class
  */
-enum class EnumSuit {
+enum class EnumSuit
+{
     SPADE,
     CLUB,
     HEART,
@@ -20,7 +20,8 @@ enum class EnumSuit {
 
     override fun toString(): String
     {
-        return when (this) {
+        return when (this)
+        {
             SPADE -> "Spades"
             CLUB -> "Clubs"
             HEART -> "Hearts"

@@ -1,30 +1,33 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
 package net.littlelite.kotlinlearn
 
-import java.util.StringTokenizer
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Null Safety
  */
-object NullSafety {
+object NullSafety
+{
 
     private const val given_words = "-ONE-,-TWO-,-THREE-,-FOUR-"
     var words = ArrayList<String>()
 
-    fun storeWords() {
+    fun storeWords()
+    {
 
         var sum = 0
 
         val strTok = StringTokenizer(given_words, ",")
-        while (strTok.hasMoreElements()) {
+        while (strTok.hasMoreElements())
+        {
             val word: String = strTok.nextElement() as String
             this.words.add(this.stripVirg(word))
             sum++
@@ -32,14 +35,16 @@ object NullSafety {
         println("Stored $sum words.")
     }
 
-    fun runIfNotNull() {
+    fun runIfNotNull()
+    {
         val isNull = null
         isNull?.let {
             println("Null is effectively null.")
         }
     }
 
-    private fun stripVirg(word: String): String {
+    private fun stripVirg(word: String): String
+    {
         return word.substring(1, word.length - 1)
     }
 }

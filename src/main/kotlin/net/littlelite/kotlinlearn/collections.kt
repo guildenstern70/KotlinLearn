@@ -1,18 +1,18 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
 package net.littlelite.kotlinlearn
 
 /**
-    Collections
+Collections
  */
-fun collections(): Int {
+fun collections(): Int
+{
 
     // Immutables
     val ints: Array<Int> = arrayOf(1, 2, 3)
@@ -38,11 +38,12 @@ fun collections(): Int {
     // HashMap
     val dictionary: HashMap<String, String> =
             hashMapOf("-x" to "One X",
-                            "-xx" to "Two X")
+                    "-xx" to "Two X")
 
     val sb = StringBuilder()
 
-    for ((k, v) in dictionary) {
+    for ((k, v) in dictionary)
+    {
         sb.append("$k = $v")
     }
 
@@ -52,15 +53,19 @@ fun collections(): Int {
     val intSlice = ints.toList().slice(1..2)
     val listSlice = listInts.slice(1..2)
 
-    for (k in intSlice) {
-        for (i in listSlice) {
-            for (j in otherInts) {
+    for (k in intSlice)
+    {
+        for (i in listSlice)
+        {
+            for (j in otherInts)
+            {
                 sum += (i + k + j)
             }
         }
     }
 
-    for (k in mutInt) {
+    for (k in mutInt)
+    {
         sum += k
     }
 

@@ -1,9 +1,8 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
@@ -13,11 +12,13 @@ package net.littlelite.kotlinlearn
 val lambdaSum = { x: Int, y: Int -> x + y }
 
 // Anonymous function
-val anonFun = fun(x: Int, y: Int): Int {
+val anonFun = fun(x: Int, y: Int): Int
+{
     return x + y
 }
 
-fun lambdatest(): Int {
+fun lambdatest(): Int
+{
 
     val sum53 = lambdaSum(5, 3)
     println("Sum 5+3 = $sum53")

@@ -1,9 +1,8 @@
-/**
+/*
+ *  KOTLIN LEARN
  *
- * KOTLIN LEARN
- *
- * MIT License (MIT)
- * Copyright (c) 2015-18 Alessio Saltarin
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2020 Alessio Saltarin
  *
  */
 
@@ -18,7 +17,8 @@ val lambdaFunction = { a: Int, b: Int -> a + b }
  * @sample
  *     highOrderFunction(3,4, ::sum)
  */
-fun highOrderFunction(a: Int, b: Int, operation: (a: Int, b: Int) -> Int): Int {
+fun highOrderFunction(a: Int, b: Int, operation: (a: Int, b: Int) -> Int): Int
+{
     return operation(a, b)
 }
 
@@ -27,7 +27,8 @@ fun highOrderFunction(a: Int, b: Int, operation: (a: Int, b: Int) -> Int): Int {
  * @sample
  *     highOrderFunction(3,4, ::sum)
  */
-fun highOrderFunctionWithLambda(a: Int, b: Int): Int {
+fun highOrderFunctionWithLambda(a: Int, b: Int): Int
+{
     return highOrderFunction(a, b, lambdaFunction)
 }
 
@@ -35,7 +36,8 @@ fun highOrderFunctionWithLambda(a: Int, b: Int): Int {
  * Closure means that lambda can access
  * in scope variables (in this case 'sum')
  */
-fun closure(): Int {
+fun closure(): Int
+{
     var sum = 0
     (1..10).forEach { sum += it }
     return sum
