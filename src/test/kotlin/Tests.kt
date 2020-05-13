@@ -31,6 +31,15 @@ class Tests
     }
 
     @Test
+    fun doubleEquality()
+    {
+        val d1 = 21.0
+        val d2 = 21.0
+        println("Double Equality = " + d1.equals(d2))
+        assertEquals(d1, d2, 0.0)
+    }
+
+    @Test
     fun testSum()
     {
         println("Function test: 5 + 7 = " + sum(5, 7).toString())
@@ -41,7 +50,7 @@ class Tests
     fun testSubtract()
     {
         val minus = substract(7, 5)
-        println("Inline Function test: 7 - 5 = " + minus.toString())
+        println("Inline Function test: 7 - 5 = $minus")
         assertEquals(minus, 2)
     }
 
@@ -49,7 +58,7 @@ class Tests
     fun testCollections()
     {
         val sum = collections()
-        println("Collections Test => Sum = " + sum.toString())
+        println("Collections Test => Sum = $sum")
         assertEquals(sum, 241)
     }
 
@@ -68,7 +77,7 @@ class Tests
     fun testForEachIndexed()
     {
         val sum = forEachIndexed()
-        println("For Each Indexed Test => Sum = " + sum.toString())
+        println("For Each Indexed Test => Sum = $sum")
         assertEquals(sum, 3)
     }
 
@@ -78,7 +87,7 @@ class Tests
         val ifex = ifelse(4, 5)
         assertEquals(ifex, 5)
         val max = ifwhen(3, 4)
-        println("IfWhen Test => Max = " + max.toString())
+        println("IfWhen Test => Max = $max")
         assertEquals(max, 4)
     }
 
@@ -194,5 +203,11 @@ class Tests
     fun interfaces()
     {
         assertEquals(29, interfaceTest())
+    }
+
+    @Test
+    fun testDates()
+    {
+        assertEquals(isoDate(), "2019-10-07T14:54Z")
     }
 }
