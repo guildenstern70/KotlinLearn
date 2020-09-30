@@ -16,4 +16,11 @@ fun main(args: Array<String>)
     println("Kotlin Learn v.$VERSION")
     println()
     println("Run tests to check output.")
+    if (args.isNotEmpty())
+    {
+        for (arg in args)
+        {
+            println("Arg = $arg")
+        }
+    }
 }
