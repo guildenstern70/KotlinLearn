@@ -94,6 +94,8 @@ fun ranges()
 
     for (i in 1..4 step 2) print(i) // prints "13"
 
+    println((1..100).random()) // prints random nr between 1 and 100
+
     if (x !in 1..3) println(x)
 
     if (str in "island".."isle") println(str)
