@@ -210,4 +210,11 @@ class Tests
     {
         assertEquals(isoDate(), "2019-10-07T14:54Z")
     }
+
+    @Test
+    fun testHighOrderFunction()
+    {
+        val items = listOf(1, 2, 3, 4, 5)
+        assertEquals(bendExample(items), 15)
+    }
 }
