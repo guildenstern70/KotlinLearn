@@ -217,4 +217,10 @@ class Tests
         val items = listOf(1, 2, 3, 4, 5)
         assertEquals(bendExample(items), 15)
     }
+
+    @Test
+    fun testDelegate()
+    {
+        assertEquals(windowArea(), 200)
+    }
 }
