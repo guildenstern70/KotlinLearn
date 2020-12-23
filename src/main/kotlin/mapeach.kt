@@ -65,9 +65,7 @@ fun each(): Int
 
     // Take a list and build another list of another type
     val anotherList = ArrayList<String>()
-    listInt.forEach { item ->
-        anotherList.add("*" + item.toString() + "*")
-    }
+    listInt.forEach { anotherList.add("*$it*") }
     printList(anotherList)
 
     return sum

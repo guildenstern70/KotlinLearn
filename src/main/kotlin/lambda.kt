@@ -11,6 +11,12 @@ package net.littlelite.kotlinlearn
 // Typical lambda function
 val lambdaSum = { x: Int, y: Int -> x + y }
 
+// Multiline lambda
+val multilineLambda = { x: Int, y: Int ->
+    val sum = anonFun(x, y)
+    println(sum)
+}
+
 // Anonymous function
 val anonFun = fun(x: Int, y: Int): Int
 {
