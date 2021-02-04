@@ -26,10 +26,20 @@ fun <T, R> Collection<T>.bend(
 }
 
 val lambdaCombineFunction = {
-        acc: Int, i: Int ->
-            val result = acc + i
-            // The last expression in a lambda is considered the return value:
-            result
+    acc: Int, i: Int ->
+        val result = acc + i
+        // The last expression in a lambda is considered the return value:
+        result
+}
+
+val booleanReducerFunction = {
+    acc: Boolean, booleanValue: Boolean ->
+        acc || booleanValue
+}
+
+fun booleanReducer(items: List<Boolean>): Boolean
+{
+    return items.reduce(booleanReducerFunction)
 }
 
 fun bendExample(items: List<Int>): Int

@@ -223,4 +223,17 @@ class Tests
     {
         assertEquals(windowArea(), 200)
     }
+
+    @Test
+    fun booleanReducer()
+    {
+        val booleans1 = listOf(true, true, false, true, false)
+        assertEquals(booleanReducer(booleans1), true)
+        val booleans2 = listOf(false, false, false, false, false)
+        assertEquals(booleanReducer(booleans2), false)
+        val booleans3 = listOf(false, false, true, false, false)
+        assertEquals(booleanReducer(booleans3), true)
+        val booleans4 = listOf(true, true, true, true, true)
+        assertEquals(booleanReducer(booleans4), true)
+    }
 }
