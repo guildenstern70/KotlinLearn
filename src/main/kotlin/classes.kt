@@ -25,6 +25,10 @@ open class Person(firstName: String, lastName: String)
         // logger.info...
     }
 
+    // Runtime computed getter
+    val isPippo: Boolean
+        get() = (this.name == "Pippo")
+
     // Secondary constructor
     constructor() : this("", "")
 

@@ -10,9 +10,10 @@ package net.littlelite.kotlinlearn
 
 /**
  * Extends String class with a new method
- *
+ * val newStr = "Prova"
+ * newStr.addPippo()
  */
-fun String.addPippo(str1: String): String
+fun String.addPippo(): String
 {
-    return str1 + "pippo"
+    return this + "pippo"
 }

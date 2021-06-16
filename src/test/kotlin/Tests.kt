@@ -196,7 +196,7 @@ class Tests
     fun testExtensions()
     {
         val str = "Trial"
-        assertEquals("Trialpippo", str.addPippo(str))
+        assertEquals("Trialpippo", str.addPippo())
     }
 
     @Test
