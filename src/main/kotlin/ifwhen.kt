@@ -43,7 +43,7 @@ fun ifwhen(a: Int, b: Int): Int
         else -> println("none of the above")
     }
 
-    println("max = " + max.toString())
+    println("max = $max")
 
     return max
 }

@@ -9,7 +9,7 @@
 
 plugins {
     application
-    kotlin("jvm") version "1.5.10"
+    kotlin("jvm") version "1.5.20"
 }
 
 repositories {
@@ -24,7 +24,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 }
 
 application {
-    mainClassName = "net.littlelite.kotlinlearn.MainKt"
+    mainClass.set("net.littlelite.kotlinlearn.MainKt")
 }
 
 dependencies {
