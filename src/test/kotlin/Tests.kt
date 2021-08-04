@@ -225,7 +225,7 @@ class Tests
     }
 
     @Test
-    fun booleanReducer()
+    fun testBooleanReducer()
     {
         val booleans1 = listOf(true, true, false, true, false)
         assertEquals(booleanReducer(booleans1), true)
@@ -235,5 +235,11 @@ class Tests
         assertEquals(booleanReducer(booleans3), true)
         val booleans4 = listOf(true, true, true, true, true)
         assertEquals(booleanReducer(booleans4), true)
+    }
+
+    @Test
+    fun testApply()
+    {
+        assertEquals(applyBook(), "Dante Alighieri")
     }
 }
