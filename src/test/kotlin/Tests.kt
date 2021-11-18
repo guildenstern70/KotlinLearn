@@ -59,7 +59,7 @@ class Tests
     {
         val sum = collections()
         println("Collections Test => Sum = $sum")
-        assertEquals(sum, 241)
+        assertEquals(sum, 300)
     }
 
     @Test

@@ -13,13 +13,13 @@ Collections
  */
 fun collections(): Int
 {
-
     // Immutables
     val ints: Array<Int> = arrayOf(1, 2, 3)
     val listInts: List<Int> = listOf(1, 2, 3) // ordered
 
     // Access array item
     val value = ints[2]
+    var sum = value  // Used for testing purposes
 
     // Array creation function
     val otherInts = Array(5) { i -> (i * i) }
@@ -31,23 +31,48 @@ fun collections(): Int
     mutInt.add(7)
 
     val mutStrings = mutableListOf<String>()
-    mutStrings.add("One")
-    mutStrings.add("Two")
-    mutStrings.add("Three")
+    mutStrings += "One"
+    mutStrings += "Two"
+    mutStrings += "Three"
+
+    // Check if item is in collection
+    if ("Two" in mutStrings)
+    {
+        sum += 77
+    }
+
+    // Check if collection is not empty
+    if (mutStrings.isNotEmpty())
+    {
+        sum -= 14
+    }
 
     // HashMap
     val dictionary: HashMap<String, String> =
             hashMapOf("-x" to "One X",
                     "-xx" to "Two X")
 
-    val sb = StringBuilder()
+    // Add to dictionary
+    dictionary["-kj"] = "Kappa Jay"
 
+    if ("-xx" in dictionary)
+    {
+        sum -= 4
+    }
+
+    // Remove from dictionary
+    dictionary -= "-xx"
+    if ("-xx" in dictionary)
+    {
+        sum -= 4
+    }
+
+    // Iterate dictionary
+    val sb = StringBuilder()
     for ((k, v) in dictionary)
     {
         sb.append("$k = $v")
     }
-
-    var sum = value
 
     // Slice
     val intSlice = ints.toList().slice(1..2)

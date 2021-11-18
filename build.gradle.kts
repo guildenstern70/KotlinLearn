@@ -9,7 +9,7 @@
 
 plugins {
     application
-    kotlin("jvm") version "1.5.20"
+    kotlin("jvm") version "1.6.0"
 }
 
 repositories {
@@ -28,6 +28,6 @@ application {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
-    testImplementation("junit:junit:4.12")
+    implementation(kotlin("stdlib:1.6.0"))
+    testImplementation("junit:junit:4.13.2")
 }
