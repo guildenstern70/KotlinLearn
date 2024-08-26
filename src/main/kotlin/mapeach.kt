@@ -9,7 +9,7 @@
 package net.littlelite.kotlinlearn
 
 /**
- *
+ * Kotlin maps: transform a list into another list
  */
 fun maps(): String
 {
@@ -33,6 +33,9 @@ fun maps(): String
     return listX[0]
 }
 
+/**
+ * Kotlin take: take first n elements from a list
+ */
 fun take(): Int
 {
 
@@ -47,6 +50,9 @@ fun take(): Int
     return firstSix[0]
 }
 
+/**
+ * Kotlin each: iterate over a list
+ */
 fun each(): Int
 {
     val listInt = listOf(1, 3, 5, 6, 77)
@@ -71,6 +77,9 @@ fun each(): Int
     return sum
 }
 
+/**
+ * Kotlin filter: filter a list
+ */
 fun filter(): Int
 {
     val listInt = listOf(1, 3, 5, 6, 77)
