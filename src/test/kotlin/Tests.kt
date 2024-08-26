@@ -246,8 +246,15 @@ class Tests
     @Test
     fun testFunctional()
     {
-        val deliveriesFunctional = functional()
+        val deliveriesFunctional = functionalListTransform()
         val deliveriesNonFunctional = nonFunctional()
         assertEquals(deliveriesFunctional, deliveriesNonFunctional)
+    }
+
+    @Test
+    fun testFunctionalPipes()
+    {
+        assertEquals(functionalIntPipes(1), 7)
+        assertEquals(functionalStringPipes("Hello"), "SEVMTE8h")
     }
 }

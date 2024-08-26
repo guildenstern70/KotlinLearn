@@ -58,7 +58,7 @@ fun nonFunctional(): List<Delivery>
     return firstThreeDeliveries
 }
 
-fun functional(): List<Delivery> {
+fun functionalListTransform(): List<Delivery> {
     val firstThreeDeliveries = getDeliveries()
         .filter { it.customerTip > 5 }
         .sortedBy { it.dropOffTime }
@@ -69,6 +69,30 @@ fun functional(): List<Delivery> {
 
     return firstThreeDeliveries
 
+}
+
+fun functionalIntPipes(n: Int): Int {
+
+    val addOne: Int.() -> Int = { this + 1 }
+    val addTwo: Int.() -> Int = { this + 2 }
+    val addThree: Int.() -> Int = { this + 3 }
+
+    return n
+        .addOne()
+        .addTwo()
+        .addThree()
+}
+
+fun functionalStringPipes(message: String): String {
+
+    val toUpperCase: String.() -> String = { this.uppercase() }
+    val addExclamation: String.() -> String = { "$this!" }
+    val convertToBase64: String.() -> String = { Base64.getEncoder().encodeToString(this.toByteArray()) }
+
+    return message
+        .toUpperCase()
+        .addExclamation()
+        .convertToBase64()
 }
 
 fun getDeliveries(): List<Delivery> {
