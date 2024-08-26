@@ -2,7 +2,7 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2020 Alessio Saltarin
+ *  Copyright (c) 2015-2024 Alessio Saltarin
  *
  */
 
@@ -17,6 +17,8 @@ package net.littlelite.kotlinlearn
  * - copy
  * - componentN
  */
-data class UserDataClass(val name: String,
-                         val surname: String,
-                         val age: Int)
+data class UserDataClass(
+    val name: String,
+    val surname: String,
+    val age: Int
+)

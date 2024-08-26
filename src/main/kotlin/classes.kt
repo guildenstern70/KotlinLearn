@@ -2,7 +2,7 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2020 Alessio Saltarin
+ *  Copyright (c) 2015-2024 Alessio Saltarin
  *
  */
 
@@ -57,7 +57,7 @@ open class Person(firstName: String, lastName: String)
 }
 
 class Student(firstName: String, lastName: String) :
-        Person(firstName, lastName)
+    Person(firstName, lastName)
 {
 
     constructor(p: Person) : this(p.name, p.surname)
@@ -70,4 +70,4 @@ class Student(firstName: String, lastName: String) :
 }
 
 class StudentShortcut(private val firstName: String, private val lastName: String) :
-        Person(firstName, lastName)
+    Person(firstName, lastName)

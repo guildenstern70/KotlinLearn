@@ -2,7 +2,7 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2020 Alessio Saltarin
+ *  Copyright (c) 2015-2024 Alessio Saltarin
  *
  */
 
@@ -17,24 +17,24 @@ package net.littlelite.kotlinlearn
 fun <T, R> Collection<T>.bend(
     initial: R,
     combine: (acc: R, nextElement: T) -> R
-): R {
+): R
+{
     var accumulator: R = initial
-    for (element: T in this) {
+    for (element: T in this)
+    {
         accumulator = combine(accumulator, element)
     }
     return accumulator
 }
 
-val lambdaCombineFunction = {
-    acc: Int, i: Int ->
-        val result = acc + i
-        // The last expression in a lambda is considered the return value:
-        result
+val lambdaCombineFunction = { acc: Int, i: Int ->
+    val result = acc + i
+    // The last expression in a lambda is considered the return value:
+    result
 }
 
-val booleanReducerFunction = {
-    acc: Boolean, booleanValue: Boolean ->
-        acc || booleanValue
+val booleanReducerFunction = { acc: Boolean, booleanValue: Boolean ->
+    acc || booleanValue
 }
 
 fun booleanReducer(items: List<Boolean>): Boolean

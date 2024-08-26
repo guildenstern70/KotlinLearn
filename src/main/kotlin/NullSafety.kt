@@ -2,14 +2,13 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2020 Alessio Saltarin
+ *  Copyright (c) 2015-2024 Alessio Saltarin
  *
  */
 
 package net.littlelite.kotlinlearn
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Null Safety

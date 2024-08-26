@@ -2,14 +2,14 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2020 Alessio Saltarin
+ *  Copyright (c) 2015-2024 Alessio Saltarin
  *
  */
 
 
 plugins {
     application
-    kotlin("jvm") version "1.6.0"
+    kotlin("jvm") version "2.0.0"
 }
 
 repositories {
@@ -19,7 +19,6 @@ repositories {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
     }
 }
 
@@ -28,6 +27,5 @@ application {
 }
 
 dependencies {
-    implementation(kotlin("stdlib:1.6.0"))
-    testImplementation("junit:junit:4.13.2")
+    testImplementation(kotlin("test"))
 }

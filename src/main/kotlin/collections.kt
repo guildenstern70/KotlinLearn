@@ -2,7 +2,7 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2020 Alessio Saltarin
+ *  Copyright (c) 2015-2024 Alessio Saltarin
  *
  */
 
@@ -49,8 +49,10 @@ fun collections(): Int
 
     // HashMap
     val dictionary: HashMap<String, String> =
-            hashMapOf("-x" to "One X",
-                    "-xx" to "Two X")
+        hashMapOf(
+            "-x" to "One X",
+            "-xx" to "Two X"
+        )
 
     // Add to dictionary
     dictionary["-kj"] = "Kappa Jay"
