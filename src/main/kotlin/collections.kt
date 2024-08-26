@@ -39,6 +39,9 @@ fun collections(): Int
     mutInt.add(6)
     mutInt.add(7)
 
+    // After we finished with the mutable list, we can convert it to an immutable list
+    val immutInt: List<Int> = mutInt.toList()
+
     val mutStrings = mutableListOf<String>()
     mutStrings += "One"
     mutStrings += "Two"
