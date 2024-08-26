@@ -9,7 +9,16 @@
 package net.littlelite.kotlinlearn
 
 /**
-Collections
+ * Collections
+ *
+ * Collections in Kotlin can be immutable or mutable.
+ * Immutable collections are read-only and cannot be modified.
+ * Mutable collections can be modified.
+ *
+ * Immutable collections:
+ * - are faster than mutable collections
+ * - are thread-safe
+ * - are more readable
  */
 fun collections(): Int
 {
