@@ -4,6 +4,11 @@ import java.time.LocalDate
 import java.util.*
 
 /*
+ * Functional Programming (FP) is a programming paradigm that treats computation as the evaluation of mathematical functions and
+ * avoids changing-state and mutable data.
+ *
+ * In FP we use:
+ *
  * (*) Pure functions. By definition, pure functions have the same return values for the same input, and there are no side effects
  * (such as updating other local variables and invoking I/O). For example, all mathematical functions, such as sum, max, and average, are pure functions.
  *
@@ -13,6 +18,11 @@ import java.util.*
  * (*) Function composition. As the word “composition” suggests, function composition refers to combining simple functions to
  * build more complicated functions. In practice, the output of a function becomes the input of another function, which yields an
  * output that is used for the input of another function, and so on.
+ *
+ * (*) Higher-order functions (HOF). In FP, functions are first-class citizens, which means that functions can be passed as arguments
+ * to other functions, returned as values from other functions, and assigned to variables. Functions that take other functions as
+ * arguments or return functions are called higher-order functions.
+ *
  */
 
 data class Delivery(
@@ -83,10 +93,16 @@ fun functionalIntPipes(n: Int): Int {
         .addThree()
 }
 
+/*
+ * FIP is a HOF (High Order Function) that takes in input a function that takes in input an integer and returns an integer.
+ */
 fun functionalInputParameter( n:Int, myFunction: (n: Int) -> Int ): Int {
     return myFunction(n)
 }
 
+/*
+ * FOP is a HOF (High Order Function) that returns a function that takes in input an integer and returns an integer.
+ */
 fun functionalOutputParameter(n: Int): (Int) -> Int {
     return { it + n }
 }
