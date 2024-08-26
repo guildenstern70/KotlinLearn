@@ -83,6 +83,33 @@ fun functionalIntPipes(n: Int): Int {
         .addThree()
 }
 
+fun functionalInputParameter( n:Int, myFunction: (n: Int) -> Int ): Int {
+    return myFunction(n)
+}
+
+fun functionalOutputParameter(n: Int): (Int) -> Int {
+    return { it + n }
+}
+
+/*
+ * Test Fip is a function that takes in input one parameter. This parameter
+ * is passed to functionalInputParameter, which is a function that takes in input
+ * 'any' function that takes in input an integer and returns an integer.
+ */
+fun testFip(n:Int): Int {
+    return functionalInputParameter(n, ::functionalIntPipes)
+}
+
+/*
+ * Test Fop is a function that takes in input one parameter. This parameter
+ * is passed to functionalOutputParameter, which is a function that returns
+ * another function that takes in input an integer and returns an integer.
+ */
+fun testFop(n: Int): Int {
+    val fop = functionalOutputParameter(n)
+    return fop(5)  // fop(5) = 5 + 10 = 15
+}
+
 fun functionalStringPipes(message: String): String {
 
     val toUpperCase: String.() -> String = { this.uppercase() }

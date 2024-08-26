@@ -257,4 +257,16 @@ class Tests
         assertEquals(functionalIntPipes(1), 7)
         assertEquals(functionalStringPipes("Hello"), "SEVMTE8h")
     }
+
+    @Test
+    fun testFunctionalInputParameter()
+    {
+        assertEquals(testFip(10), 16)
+    }
+
+    @Test
+    fun testFunctionalOutputParameter()
+    {
+        assertEquals(testFop(10), 15)
+    }
 }
