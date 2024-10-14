@@ -14,25 +14,20 @@ import org.junit.Before
 import org.junit.Test
 import java.io.File
 
-class Tests
-{
-
+class Tests {
     @Before
-    fun setUp()
-    {
+    fun setUp() {
         // set up the test case
     }
 
     @After
-    fun tearDown()
-    {
+    fun tearDown() {
         val tmpFile = File("tempfile.txt")
         if (tmpFile.exists()) tmpFile.delete()
     }
 
     @Test
-    fun doubleEquality()
-    {
+    fun doubleEquality() {
         val d1 = 21.0
         val d2 = 21.0
         println("Double Equality = " + d1.equals(d2))
@@ -40,31 +35,27 @@ class Tests
     }
 
     @Test
-    fun testSum()
-    {
+    fun testSum() {
         println("Function test: 5 + 7 = " + sum(5, 7).toString())
         assertEquals(12, sum(5, 7))
     }
 
     @Test
-    fun testSubtract()
-    {
+    fun testSubtract() {
         val minus = substract(7, 5)
         println("Inline Function test: 7 - 5 = $minus")
         assertEquals(minus, 2)
     }
 
     @Test
-    fun testCollections()
-    {
+    fun testCollections() {
         val sum = collections()
         println("Collections Test => Sum = $sum")
         assertEquals(sum, 300)
     }
 
     @Test
-    fun testLoops()
-    {
+    fun testLoops() {
         val sum = loops()
         val sum2 = arraysWithIndices()
         val index = breakloop()
@@ -74,16 +65,14 @@ class Tests
     }
 
     @Test
-    fun testForEachIndexed()
-    {
+    fun testForEachIndexed() {
         val sum = forEachIndexed()
         println("For Each Indexed Test => Sum = $sum")
         assertEquals(sum, 3)
     }
 
     @Test
-    fun testIfWhen()
-    {
+    fun testIfWhen() {
         val ifex = ifelse(4, 5)
         assertEquals(ifex, 5)
         val max = ifwhen(3, 4)
@@ -92,8 +81,7 @@ class Tests
     }
 
     @Test
-    fun testClasses()
-    {
+    fun testClasses() {
         val alessio = Person()
         alessio.name = "Alessio"
         alessio.surname = "Saltarin"
@@ -107,8 +95,7 @@ class Tests
     }
 
     @Test
-    fun testObjects()
-    {
+    fun testObjects() {
         val obj = SingletonObject
         obj.hello()
         SingletonObject.hello()
@@ -116,8 +103,7 @@ class Tests
     }
 
     @Test
-    fun testFiles()
-    {
+    fun testFiles() {
         createRandomTextFile()
         val tmpFile = File("tempfile.txt")
         assertTrue(tmpFile.exists())
@@ -128,22 +114,19 @@ class Tests
     }
 
     @Test
-    fun testNullSafety()
-    {
+    fun testNullSafety() {
         NullSafety.storeWords()
         assertEquals(NullSafety.words.count(), 4)
     }
 
     @Test
-    fun testCompanion()
-    {
+    fun testCompanion() {
         val poly = Companion.create(4)
         assertEquals(poly.numberOfSides, 4)
     }
 
     @Test
-    fun testDataClass()
-    {
+    fun testDataClass() {
         val dc = UserDataClass("Alessio", "Saltarin", 45)
         println("UserDataClass Name: " + dc.component1())
         assertEquals("Alessio", dc.component1())
@@ -152,14 +135,12 @@ class Tests
     }
 
     @Test
-    fun testLambda()
-    {
+    fun testLambda() {
         assertEquals(16, lambdatest())
     }
 
     @Test
-    fun testSuits()
-    {
+    fun testSuits() {
         val s1 = EnumSuit.HEART
         val s2 = EnumSuit.DIAMOND
         assertEquals("Diamonds", s2.toString())
@@ -167,8 +148,7 @@ class Tests
     }
 
     @Test
-    fun testMapEach()
-    {
+    fun testMapEach() {
         val valore = maps()
         assertTrue(valore.startsWith("X"))
         assertEquals(92, each())
@@ -176,15 +156,13 @@ class Tests
     }
 
     @Test
-    fun testTake()
-    {
+    fun testTake() {
         val value = take()
         assertEquals(1, value)
     }
 
     @Test
-    fun testClosures()
-    {
+    fun testClosures() {
         val two = 2
         val four = 4
         assertEquals(6, highOrderFunction(two, four, ::sum))
@@ -193,40 +171,34 @@ class Tests
     }
 
     @Test
-    fun testExtensions()
-    {
+    fun testExtensions() {
         val str = "Trial"
         assertEquals("Trialpippo", str.addPippo())
     }
 
     @Test
-    fun interfaces()
-    {
+    fun interfaces() {
         assertEquals(29, interfaceTest())
     }
 
     @Test
-    fun testDates()
-    {
+    fun testDates() {
         assertEquals(isoDate(), "2019-10-07T14:54Z")
     }
 
     @Test
-    fun testHighOrderFunction()
-    {
+    fun testHighOrderFunction() {
         val items = listOf(1, 2, 3, 4, 5)
         assertEquals(bendExample(items), 15)
     }
 
     @Test
-    fun testDelegate()
-    {
+    fun testDelegate() {
         assertEquals(windowArea(), 200)
     }
 
     @Test
-    fun testBooleanReducer()
-    {
+    fun testBooleanReducer() {
         val booleans1 = listOf(true, true, false, true, false)
         assertEquals(booleanReducer(booleans1), true)
         val booleans2 = listOf(false, false, false, false, false)
@@ -238,35 +210,30 @@ class Tests
     }
 
     @Test
-    fun testApply()
-    {
+    fun testApply() {
         assertEquals(applyBook(), "Dante Alighieri")
     }
 
     @Test
-    fun testFunctional()
-    {
+    fun testFunctional() {
         val deliveriesFunctional = functionalListTransform()
         val deliveriesNonFunctional = nonFunctional()
         assertEquals(deliveriesFunctional, deliveriesNonFunctional)
     }
 
     @Test
-    fun testFunctionalPipes()
-    {
+    fun testFunctionalPipes() {
         assertEquals(functionalIntPipes(1), 7)
         assertEquals(functionalStringPipes("Hello"), "SEVMTE8h")
     }
 
     @Test
-    fun testFunctionalInputParameter()
-    {
+    fun testFunctionalInputParameter() {
         assertEquals(testFip(10), 16)
     }
 
     @Test
-    fun testFunctionalOutputParameter()
-    {
+    fun testFunctionalOutputParameter() {
         assertEquals(testFop(10), 15)
     }
 }

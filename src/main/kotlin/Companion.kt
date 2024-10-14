@@ -8,9 +8,9 @@
 
 package net.littlelite.kotlinlearn
 
-class Companion(sides: Int)
-{
-
+class Companion(
+    sides: Int,
+) {
     // Getters / Setters
     var numberOfSides = sides
 
@@ -18,8 +18,7 @@ class Companion(sides: Int)
      * The companion method can be called as
      * Companion.create(4)
      */
-    companion object Factory
-    {
+    companion object Factory {
         fun create(sides: Int): Companion = Companion(sides)
     }
 }

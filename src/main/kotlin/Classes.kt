@@ -11,9 +11,10 @@ package net.littlelite.kotlinlearn
 /**
  * An example of a class of Persons
  */
-open class Person(firstName: String, lastName: String)
-{
-
+open class Person(
+    firstName: String,
+    lastName: String,
+) {
     // Getters / Setters
     var name = firstName
     var surname = lastName
@@ -35,19 +36,16 @@ open class Person(firstName: String, lastName: String)
     // Property
     var fullName = "$firstName $lastName"
 
-    open fun hello()
-    {
+    open fun hello() {
         val name = this.toString()
         println("Hello, my name is $name")
     }
 
-    private fun changeName()
-    {
+    private fun changeName() {
         this.name = "Pippo"
     }
 
-    override fun toString(): String
-    {
+    override fun toString(): String {
         val sb = StringBuilder()
         sb.append(this.name)
         sb.append(' ')
@@ -56,18 +54,19 @@ open class Person(firstName: String, lastName: String)
     }
 }
 
-class Student(firstName: String, lastName: String) :
-    Person(firstName, lastName)
-{
-
+class Student(
+    firstName: String,
+    lastName: String,
+) : Person(firstName, lastName) {
     constructor(p: Person) : this(p.name, p.surname)
 
-    override fun hello()
-    {
+    override fun hello() {
         val name = this.toString()
         println("Hello, my name is $name and I'm a student.")
     }
 }
 
-class StudentShortcut(private val firstName: String, private val lastName: String) :
-    Person(firstName, lastName)
+class StudentShortcut(
+    private val firstName: String,
+    private val lastName: String,
+) : Person(firstName, lastName)

@@ -20,15 +20,14 @@ package net.littlelite.kotlinlearn
  * - are thread-safe
  * - are more readable
  */
-fun collections(): Int
-{
+fun collections(): Int {
     // Immutables
     val ints: Array<Int> = arrayOf(1, 2, 3)
     val listInts: List<Int> = listOf(1, 2, 3) // ordered
 
     // Access array item
     val value = ints[2]
-    var sum = value  // Used for testing purposes
+    var sum = value // Used for testing purposes
 
     // Array creation function
     val otherInts = Array(5) { i -> (i * i) }
@@ -48,14 +47,12 @@ fun collections(): Int
     mutStrings += "Three"
 
     // Check if item is in collection
-    if ("Two" in mutStrings)
-    {
+    if ("Two" in mutStrings) {
         sum += 77
     }
 
     // Check if collection is not empty
-    if (mutStrings.isNotEmpty())
-    {
+    if (mutStrings.isNotEmpty()) {
         sum -= 14
     }
 
@@ -63,28 +60,25 @@ fun collections(): Int
     val dictionary: HashMap<String, String> =
         hashMapOf(
             "-x" to "One X",
-            "-xx" to "Two X"
+            "-xx" to "Two X",
         )
 
     // Add to dictionary
     dictionary["-kj"] = "Kappa Jay"
 
-    if ("-xx" in dictionary)
-    {
+    if ("-xx" in dictionary) {
         sum -= 4
     }
 
     // Remove from dictionary
     dictionary -= "-xx"
-    if ("-xx" in dictionary)
-    {
+    if ("-xx" in dictionary) {
         sum -= 4
     }
 
     // Iterate dictionary
     val sb = StringBuilder()
-    for ((k, v) in dictionary)
-    {
+    for ((k, v) in dictionary) {
         sb.append("$k = $v")
     }
 
@@ -92,19 +86,15 @@ fun collections(): Int
     val intSlice = ints.toList().slice(1..2)
     val listSlice = listInts.slice(1..2)
 
-    for (k in intSlice)
-    {
-        for (i in listSlice)
-        {
-            for (j in otherInts)
-            {
+    for (k in intSlice) {
+        for (i in listSlice) {
+            for (j in otherInts) {
                 sum += (i + k + j)
             }
         }
     }
 
-    for (k in mutInt)
-    {
+    for (k in mutInt) {
         sum += k
     }
 

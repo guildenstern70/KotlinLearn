@@ -12,9 +12,7 @@ import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
-
-fun isoDate(): String
-{
+fun isoDate(): String {
     val tz = TimeZone.getTimeZone("UTC")
     val df: DateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'") // Quoted "Z" to indicate UTC, no timezone offset
     df.timeZone = tz

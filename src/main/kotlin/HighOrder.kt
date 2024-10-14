@@ -16,12 +16,10 @@ package net.littlelite.kotlinlearn
  */
 fun <T, R> Collection<T>.bend(
     initial: R,
-    combine: (acc: R, nextElement: T) -> R
-): R
-{
+    combine: (acc: R, nextElement: T) -> R,
+): R {
     var accumulator: R = initial
-    for (element: T in this)
-    {
+    for (element: T in this) {
         accumulator = combine(accumulator, element)
     }
     return accumulator
@@ -37,13 +35,9 @@ val booleanReducerFunction = { acc: Boolean, booleanValue: Boolean ->
     acc || booleanValue
 }
 
-fun booleanReducer(items: List<Boolean>): Boolean
-{
-    return items.reduce(booleanReducerFunction)
-}
+fun booleanReducer(items: List<Boolean>): Boolean = items.reduce(booleanReducerFunction)
 
-fun bendExample(items: List<Int>): Int
-{
+fun bendExample(items: List<Int>): Int {
     val initialValue = 0
     return items.bend(initialValue, lambdaCombineFunction)
 }

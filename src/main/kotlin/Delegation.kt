@@ -8,29 +8,30 @@
 
 package net.littlelite.kotlinlearn
 
-interface Shape
-{
+interface Shape {
     fun area(): Int
 }
 
-class Rectangle(private val width: Int, private val height: Int) : Shape
-{
+class Rectangle(
+    private val width: Int,
+    private val height: Int,
+) : Shape {
     override fun area() = width * height
 }
 
-class Window(private val bounds: Shape) : Shape by bounds
+class Window(
+    private val bounds: Shape,
+) : Shape by bounds
 
 /**
  * Delegation:
  * object 'window' delegates to object 'rectangle'
  * the implementation of 'area()'
  */
-fun windowArea(): Int
-{
+fun windowArea(): Int {
     val rectangle = Rectangle(10, 20)
     val window = Window(rectangle)
     val windowArea = window.area()
     println("The area of the window is $windowArea")
     return windowArea
 }
-

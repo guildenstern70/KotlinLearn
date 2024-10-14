@@ -18,14 +18,12 @@ val multilineLambda = { x: Int, y: Int ->
 }
 
 // Anonymous function
-val anonFun = fun(x: Int, y: Int): Int
-{
-    return x + y
-}
+val anonFun = fun(
+    x: Int,
+    y: Int,
+): Int = x + y
 
-fun lambdatest(): Int
-{
-
+fun lambdatest(): Int {
     val sum53 = lambdaSum(5, 3)
     println("Sum 5+3 = $sum53")
 

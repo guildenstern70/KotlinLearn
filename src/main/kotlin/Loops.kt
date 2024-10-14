@@ -8,13 +8,10 @@
 
 package net.littlelite.kotlinlearn
 
-fun loops(): Int
-{
-
+fun loops(): Int {
     var sum = 0
 
-    for (j in Array(10) { i -> i })
-    {
+    for (j in Array(10) { i -> i }) {
         print(j.toString())
         print(' ')
         sum += j
@@ -23,8 +20,7 @@ fun loops(): Int
     println()
 
     var k = 0
-    while (k < 10)
-    {
+    while (k < 10) {
         print(k++.toString())
         print(' ')
         sum += k
@@ -33,45 +29,35 @@ fun loops(): Int
     return sum // should be 100
 }
 
-fun arraysWithIndices(): Int
-{
-
+fun arraysWithIndices(): Int {
     val fruits = listOf("Banana", "Apple", "Mango")
     var sum = 0
     println()
 
-    for ((index, value) in fruits.withIndex())
-    {
+    for ((index, value) in fruits.withIndex()) {
         sum += index
         println("the element at $index is $value")
     }
 
     return sum
-
 }
 
-fun breakloop(): Int
-{
-
+fun breakloop(): Int {
     val commands = listOf("Start", "Stop", "Restore")
     var commandFound = 0
 
     // LoopCommands is a break label
-    loopcommands@ for ((index, command) in commands.withIndex())
-    {
-        if (command == "Stop")
-        {
+    loopcommands@ for ((index, command) in commands.withIndex()) {
+        if (command == "Stop") {
             commandFound = index
             break@loopcommands
         }
-
     }
 
     return commandFound
 }
 
-fun forEachIndexed(): Int
-{
+fun forEachIndexed(): Int {
     val collection = listOf("Banana", "Apple", "Mango")
     var sum = 0
     collection.forEachIndexed { index, element ->
@@ -81,14 +67,11 @@ fun forEachIndexed(): Int
     return sum
 }
 
-fun ranges()
-{
-
+fun ranges() {
     val x = 0
     val str = "islb"
 
-    for (i in 1..10)
-    { // equivalent of 1 <= i && i <= 10
+    for (i in 1..10) { // equivalent of 1 <= i && i <= 10
         println(i)
     }
 

@@ -20,5 +20,5 @@ package net.littlelite.kotlinlearn
 data class UserDataClass(
     val name: String,
     val surname: String,
-    val age: Int
+    val age: Int,
 )

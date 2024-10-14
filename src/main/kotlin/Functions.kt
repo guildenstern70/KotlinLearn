@@ -15,18 +15,23 @@ package net.littlelite.kotlinlearn
  * - Referentially transparent: You can replace a function call with its return value without
  *   affecting the program's behavior.
  */
-fun sum(a: Int, b: Int): Int
-{
-    return a + b
-}
+fun sum(
+    a: Int,
+    b: Int,
+): Int = a + b
 
 /**
  * Multiply function return int (inline)
  */
-fun multiply(a: Int, b: Int): Int = a * b
+fun multiply(
+    a: Int,
+    b: Int,
+): Int = a * b
 
 /**
  * Subtract function (inline)
  */
-fun substract(a: Int, b: Int): Int = a - b
-
+fun substract(
+    a: Int,
+    b: Int,
+): Int = a - b

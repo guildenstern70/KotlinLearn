@@ -8,26 +8,22 @@
 
 package net.littlelite.kotlinlearn
 
-interface InterfaceWProperties
-{
+interface InterfaceWProperties {
     val prop: Int // abstract
 
     val propertyWithImplementation: String
         get() = "foo"
 
-    fun foo()
-    {
+    fun foo() {
         print(prop)
     }
 }
 
-class Child : InterfaceWProperties
-{
+class Child : InterfaceWProperties {
     override val prop: Int = 29
 }
 
-fun interfaceTest(): Int
-{
+fun interfaceTest(): Int {
     val child = Child()
     return child.prop
 }

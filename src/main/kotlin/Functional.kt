@@ -29,12 +29,11 @@ data class Delivery(
     val id: Int,
     val basePay: Double,
     val customerTip: Double,
-    val dropOffTime: LocalDate
+    val dropOffTime: LocalDate,
 )
 
 // Old non-functional way
-fun nonFunctional(): List<Delivery>
-{
+fun nonFunctional(): List<Delivery> {
     val deliveries = getDeliveries()
 
     // Filter by customerTip > 5
@@ -51,14 +50,14 @@ fun nonFunctional(): List<Delivery>
     // Sort by delivery.dropOffTime descending
     Collections.sort(
         filteredDeliveries,
-        getCalendarComparator()
+        getCalendarComparator(),
     )
 
     println("Filtered and sorted deliveries:")
     printDeliveries(filteredDeliveries)
 
     val firstThreeDeliveries = mutableListOf<Delivery>()
-    for (i in 0..< 3) {
+    for (i in 0..<3) {
         firstThreeDeliveries.add(filteredDeliveries.get(i))
     }
 
@@ -69,20 +68,19 @@ fun nonFunctional(): List<Delivery>
 }
 
 fun functionalListTransform(): List<Delivery> {
-    val firstThreeDeliveries = getDeliveries()
-        .filter { it.customerTip > 5 }
-        .sortedBy { it.dropOffTime }
-        .take(3)
+    val firstThreeDeliveries =
+        getDeliveries()
+            .filter { it.customerTip > 5 }
+            .sortedBy { it.dropOffTime }
+            .take(3)
 
     println("Filtered and sorted and first three deliveries:")
     printDeliveries(firstThreeDeliveries)
 
     return firstThreeDeliveries
-
 }
 
 fun functionalIntPipes(n: Int): Int {
-
     val addOne: Int.() -> Int = { this + 1 }
     val addTwo: Int.() -> Int = { this + 2 }
     val addThree: Int.() -> Int = { this + 3 }
@@ -96,25 +94,22 @@ fun functionalIntPipes(n: Int): Int {
 /*
  * FIP is a HOF (High Order Function) that takes in input a function that takes in input an integer and returns an integer.
  */
-fun functionalInputParameter( n:Int, myFunction: (n: Int) -> Int ): Int {
-    return myFunction(n)
-}
+fun functionalInputParameter(
+    n: Int,
+    myFunction: (n: Int) -> Int,
+): Int = myFunction(n)
 
 /*
  * FOP is a HOF (High Order Function) that returns a function that takes in input an integer and returns an integer.
  */
-fun functionalOutputParameter(n: Int): (Int) -> Int {
-    return { it + n }
-}
+fun functionalOutputParameter(n: Int): (Int) -> Int = { it + n }
 
 /*
  * Test Fip is a function that takes in input one parameter. This parameter
  * is passed to functionalInputParameter, which is a function that takes in input
  * 'any' function that takes in input an integer and returns an integer.
  */
-fun testFip(n:Int): Int {
-    return functionalInputParameter(n, ::functionalIntPipes)
-}
+fun testFip(n: Int): Int = functionalInputParameter(n, ::functionalIntPipes)
 
 /*
  * Test Fop is a function that takes in input one parameter. This parameter
@@ -123,11 +118,10 @@ fun testFip(n:Int): Int {
  */
 fun testFop(n: Int): Int {
     val fop = functionalOutputParameter(n)
-    return fop(5)  // fop(5) = 5 + 10 = 15
+    return fop(5) // fop(5) = 5 + 10 = 15
 }
 
 fun functionalStringPipes(message: String): String {
-
     val toUpperCase: String.() -> String = { this.uppercase() }
     val addExclamation: String.() -> String = { "$this!" }
     val convertToBase64: String.() -> String = { Base64.getEncoder().encodeToString(this.toByteArray()) }
@@ -138,51 +132,47 @@ fun functionalStringPipes(message: String): String {
         .convertToBase64()
 }
 
-fun getDeliveries(): List<Delivery> {
-    return listOf(
+fun getDeliveries(): List<Delivery> =
+    listOf(
         Delivery(
             10,
             10.0,
             5.5,
-            LocalDate.parse("2018-12-12")
-
+            LocalDate.parse("2018-12-12"),
         ),
         Delivery(
             11,
             12.0,
             3.0,
-            LocalDate.parse("2018-08-24")
+            LocalDate.parse("2018-08-24"),
         ),
         Delivery(
             12,
             10.0,
             6.0,
-            LocalDate.parse("2020-01-15")
+            LocalDate.parse("2020-01-15"),
         ),
         Delivery(
             13,
             10.0,
             8.0,
-            LocalDate.parse("2017-12-19")
+            LocalDate.parse("2017-12-19"),
         ),
         Delivery(
             14,
             10.0,
             6.5,
-            LocalDate.parse("2018-05-22")
+            LocalDate.parse("2018-05-22"),
         ),
         Delivery(
             15,
             10.0,
             7.0,
-            LocalDate.parse("2018-06-02")
-        )
+            LocalDate.parse("2018-06-02"),
+        ),
     )
-}
 
-fun getCalendarComparator(): Comparator<Delivery> {
-    return Comparator { o1, o2 -> o1.dropOffTime.compareTo(o2.dropOffTime) }
-}
+fun getCalendarComparator(): Comparator<Delivery> = Comparator { o1, o2 -> o1.dropOffTime.compareTo(o2.dropOffTime) }
 
 fun printDeliveries(deliveries: List<Delivery>) {
     for (delivery in deliveries) {

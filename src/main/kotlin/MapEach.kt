@@ -11,23 +11,23 @@ package net.littlelite.kotlinlearn
 /**
  * Kotlin maps: transform a list into another list
  */
-fun maps(): String
-{
-
+fun maps(): String {
     val listStrings = listOf("aaa", "bbb", "ccc")
 
     println("Initial List: ")
     printList(listStrings)
 
-    val listIndexes = listStrings.mapIndexed { i, s ->
-        (i + 1).toString() + ") " + s
-    }
+    val listIndexes =
+        listStrings.mapIndexed { i, s ->
+            (i + 1).toString() + ") " + s
+        }
 
     printList(listIndexes)
 
-    val listX = listStrings.map {
-        "X$it"
-    }
+    val listX =
+        listStrings.map {
+            "X$it"
+        }
 
     printList(listX)
     return listX[0]
@@ -36,9 +36,7 @@ fun maps(): String
 /**
  * Kotlin take: take first n elements from a list
  */
-fun take(): Int
-{
-
+fun take(): Int {
     val list = listOf(1, 2, 3, 4, 5, 6)
 
     val firstThree = list.take(3)
@@ -53,8 +51,7 @@ fun take(): Int
 /**
  * Kotlin each: iterate over a list
  */
-fun each(): Int
-{
+fun each(): Int {
     val listInt = listOf(1, 3, 5, 6, 77)
     val listItems = listOf("One", "Two", "Three")
 
@@ -80,8 +77,7 @@ fun each(): Int
 /**
  * Kotlin filter: filter a list
  */
-fun filter(): Int
-{
+fun filter(): Int {
     val listInt = listOf(1, 3, 5, 6, 77)
 
     val filteredList = listInt.filter { it % 2 == 0 }
@@ -94,11 +90,9 @@ fun filter(): Int
     return sum
 }
 
-fun printList(listItems: List<Any>)
-{
+fun printList(listItems: List<Any>) {
     println()
-    for (item in listItems)
-    {
+    for (item in listItems) {
         print(item.toString())
         print(" ")
     }
