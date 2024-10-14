@@ -99,7 +99,7 @@ class Tests {
         val obj = SingletonObject
         obj.hello()
         SingletonObject.hello()
-        assertEquals("234", SingletonObject.id)
+        assertEquals("234", SingletonObject.ID)
     }
 
     @Test
