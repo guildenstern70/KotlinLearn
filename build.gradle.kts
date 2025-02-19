@@ -2,14 +2,14 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2024 Alessio Saltarin
+ *  Copyright (c) 2015-2025 Alessio Saltarin
  *
  */
 
 
 plugins {
     application
-    kotlin("jvm") version "2.0.10"
+    kotlin("jvm") version "2.1.10"
 }
 
 repositories {

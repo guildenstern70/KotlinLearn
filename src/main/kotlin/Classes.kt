@@ -2,7 +2,7 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2024 Alessio Saltarin
+ *  Copyright (c) 2015-2025 Alessio Saltarin
  *
  */
 
@@ -29,6 +29,8 @@ open class Person(
     // Runtime computed getter
     val isPippo: Boolean
         get() = (this.name == "Pippo")
+
+    val nameAndSurname: String = this.name + " " + this.surname
 
     // Secondary constructor
     constructor() : this("", "")
