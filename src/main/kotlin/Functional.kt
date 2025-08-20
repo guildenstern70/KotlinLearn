@@ -1,3 +1,11 @@
+/*
+ *  KOTLIN LEARN
+ *
+ *  MIT License (MIT)
+ *  Copyright (c) 2015-2025 Alessio Saltarin
+ *
+ */
+
 package net.littlelite.kotlinlearn
 
 import java.time.LocalDate

@@ -2,7 +2,7 @@
  *  KOTLIN LEARN
  *
  *  MIT License (MIT)
- *  Copyright (c) 2015-2024 Alessio Saltarin
+ *  Copyright (c) 2015-2025 Alessio Saltarin
  *
  */
 
@@ -99,7 +99,7 @@ class Tests {
         val obj = SingletonObject
         obj.hello()
         SingletonObject.hello()
-        assertEquals("234", SingletonObject.ID)
+        assertEquals("234", SingletonObject.id)
     }
 
     @Test
