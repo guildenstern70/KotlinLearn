@@ -30,6 +30,8 @@ open class Person(
     val isPippo: Boolean
         get() = (this.name == "Pippo")
 
+    val nameAndSurname: String = this.name + " " + this.surname
+
     // Secondary constructor
     constructor() : this("", "")
 
